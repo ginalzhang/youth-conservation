@@ -638,19 +638,20 @@ const impactItems = [
 
   .feed-preview {
     position: relative;
-    min-height: 520px;
+    grid-column: 1 / -1;
+    min-height: 0;
     overflow: hidden;
     border: 1px solid rgba(76, 112, 49, 0.2);
     border-radius: 8px;
     background: var(--paper);
     box-shadow: var(--shadow);
-    transform: rotate(1.5deg);
+    transform: rotate(0.7deg);
   }
 
   .feed-preview img {
     width: 100%;
-    height: 520px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     object-position: left top;
   }
 
@@ -813,8 +814,8 @@ const impactItems = [
 
     .feed-preview,
     .feed-preview img {
-      min-height: 420px;
-      height: 420px;
+      min-height: 0;
+      height: auto;
     }
   }
 
