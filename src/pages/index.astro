@@ -6,18 +6,34 @@ import { homePage, toPublicPath } from "../lib/content";
 <BaseLayout title={homePage.title} description={homePage.description} currentPath="/">
   <main>
     <section class="sec home-hero">
-      <div class="home-hero-inner" data-reveal>
-        <div class="eyebrow hero-eyebrow">{homePage.hero.eyebrow}</div>
-        <h1 class="display">{homePage.hero.heading}</h1>
-        <p class="lede">{homePage.hero.body}</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href={homePage.hero.primaryCta.href}>
-            {homePage.hero.primaryCta.label}
-          </a>
-          <a class="btn btn-ghost" href={homePage.hero.secondaryCta.href}>
-            {homePage.hero.secondaryCta.label}
-          </a>
+      <div class="wrap hero-layout">
+        <div class="home-hero-inner hero-copy" data-reveal>
+          <div class="eyebrow hero-eyebrow">{homePage.hero.eyebrow}</div>
+          <h1 class="display">{homePage.hero.heading}</h1>
+          <p class="lede">{homePage.hero.body}</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href={homePage.hero.primaryCta.href}>
+              {homePage.hero.primaryCta.label}
+            </a>
+            <a class="btn btn-ghost" href={homePage.hero.secondaryCta.href}>
+              {homePage.hero.secondaryCta.label}
+            </a>
+          </div>
         </div>
+
+        <aside class="hero-art" aria-label="Bay Area Youth Conservation visual identity" data-reveal>
+          <div class="hero-logo-card">
+            <img src="/assets/bayc-logo.png" alt="Bay Area Youth Conservation hummingbird logo" />
+          </div>
+          <div class="floating-note note-a">
+            <span>{homePage.highlights.items[1].value}</span>
+            <strong>{homePage.highlights.items[1].label}</strong>
+          </div>
+          <div class="floating-note note-b">
+            <span>{homePage.highlights.items[2].value}</span>
+            <strong>{homePage.highlights.items[2].label}</strong>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -92,3 +108,146 @@ import { homePage, toPublicPath } from "../lib/content";
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.8fr);
+    align-items: center;
+    gap: clamp(36px, 6vw, 88px);
+  }
+
+  .hero-copy {
+    margin: 0;
+    text-align: left;
+  }
+
+  .home-hero .hero-copy .lede {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .hero-copy .cta-row {
+    justify-content: flex-start;
+  }
+
+  .hero-art {
+    position: relative;
+    min-height: clamp(360px, 42vw, 520px);
+  }
+
+  .hero-logo-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    width: min(76%, 340px);
+    aspect-ratio: 1;
+    place-items: center;
+    padding: clamp(28px, 5vw, 48px);
+    border: 1px solid rgba(46, 74, 36, 0.16);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 30% 26%, rgba(101, 224, 221, 0.24), transparent 32%),
+      #fff;
+    box-shadow: 0 26px 60px rgba(46, 74, 36, 0.13);
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+
+  .hero-logo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .floating-note {
+    position: absolute;
+    display: grid;
+    gap: 5px;
+    max-width: 210px;
+    padding: 15px 16px;
+    border: 1px solid rgba(46, 74, 36, 0.14);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 16px 36px rgba(46, 74, 36, 0.12);
+  }
+
+  .floating-note span {
+    color: var(--olive);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .floating-note strong {
+    color: var(--green-deep);
+    font-size: 14.5px;
+    line-height: 1.35;
+  }
+
+  .note-a {
+    top: 44px;
+    right: 0;
+  }
+
+  .note-b {
+    bottom: 48px;
+    left: 0;
+  }
+
+  @media (max-width: 860px) {
+    .hero-layout {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      text-align: center;
+    }
+
+    .home-hero .hero-copy .lede {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .hero-copy .cta-row {
+      justify-content: center;
+    }
+
+    .hero-art {
+      min-height: 360px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-art {
+      min-height: 330px;
+    }
+
+    .hero-logo-card {
+      width: min(74%, 260px);
+      padding: 28px;
+      border-radius: 16px;
+    }
+
+    .floating-note {
+      max-width: 176px;
+      padding: 12px;
+      border-radius: 12px;
+    }
+
+    .floating-note strong {
+      font-size: 13px;
+    }
+
+    .note-a {
+      top: 18px;
+    }
+
+    .note-b {
+      bottom: 22px;
+    }
+  }
+</style>
