@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getVisibleTeamMembers, teamPage, toPublicPath } from "../lib/content";
+
+const members = getVisibleTeamMembers();
+const placeholders = Array.from({ length: teamPage.placeholder.count });
+---
+
+<BaseLayout title={teamPage.title} description={teamPage.description} currentPath="/team/">
+  <main>
+    <section class="sec-sm page-header">
+      <div class="page-header-inner">
+        <div class="eyebrow">{teamPage.header.eyebrow}</div>
+        <h1 class="page">{teamPage.header.heading}</h1>
+        <p class="body">{teamPage.header.body}</p>
+      </div>
+    </section>
+
+    <section class="sec-sm">
+      <div class="wrap grid grid-team" data-reveal>
+        {
+          members.length > 0
+            ? members.map((member) => (
+                <article class="team-card">
+                  {member.photo ? (
+                    <img
+                      class="photo team-photo"
+                      src={toPublicPath(member.photo)}
+                      alt={member.photoAlt || member.name}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div class="photo-placeholder">{teamPage.placeholder.photoLabel}</div>
+                  )}
+                  <div class="kicker">{member.role}</div>
+                  <h2>{member.name}</h2>
+                  {member.bio ? <p class="body-sm">{member.bio}</p> : null}
+                </article>
+              ))
+            : placeholders.map(() => (
+                <article class="team-card">
+                  <div class="photo-placeholder">{teamPage.placeholder.photoLabel}</div>
+                  <div class="kicker">{teamPage.placeholder.roleLabel}</div>
+                  <h2>{teamPage.placeholder.nameLabel}</h2>
+                </article>
+              ))
+        }
+      </div>
+      {members.length === 0 ? <div class="wrap placeholder-note">{teamPage.placeholder.note}</div> : null}
+    </section>
+  </main>
+</BaseLayout>

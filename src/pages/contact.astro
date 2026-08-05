@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { contactPage, siteSettings } from "../lib/content";
+---
+
+<BaseLayout title={contactPage.title} description={contactPage.description} currentPath="/contact/">
+  <main>
+    <section class="sec-sm page-header">
+      <div class="page-header-inner">
+        <div class="eyebrow">{contactPage.header.eyebrow}</div>
+        <h1 class="page">{contactPage.header.heading}</h1>
+        <p class="body">{contactPage.header.body}</p>
+      </div>
+    </section>
+
+    <section class="sec-sm">
+      <div class="contact-layout">
+        <div>
+          <div id="contact-success" class="contact-success" hidden>
+            <h2>{contactPage.success.heading}</h2>
+            <p>{contactPage.success.body}</p>
+            <button type="button" id="contact-reset" class="link-btn">
+              {contactPage.success.resetLabel}
+            </button>
+          </div>
+
+          <form
+            id="contact-form"
+            action={`mailto:${siteSettings.contactEmail}`}
+            method="post"
+            enctype="text/plain"
+          >
+            <label class="field">
+              <span>{contactPage.form.nameLabel}</span>
+              <input type="text" name="name" required />
+            </label>
+            <label class="field">
+              <span>{contactPage.form.emailLabel}</span>
+              <input type="email" name="email" required />
+            </label>
+            <label class="field">
+              <span>{contactPage.form.topicLabel}</span>
+              <select name="topic">
+                {contactPage.form.topics.map((topic) => <option>{topic}</option>)}
+              </select>
+            </label>
+            <label class="field">
+              <span>{contactPage.form.messageLabel}</span>
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">{contactPage.form.submitLabel}</button>
+            <p class="form-note">{contactPage.form.note}</p>
+          </form>
+        </div>
+
+        <aside class="contact-card">
+          <div class="kicker">{contactPage.sidebar.heading}</div>
+          <div class="contact-links">
+            <a href={`mailto:${siteSettings.contactEmail}`}>{siteSettings.contactEmail}</a>
+            <a href={siteSettings.instagramUrl}>{siteSettings.instagramLabel}</a>
+          </div>
+          <div class="contact-location">
+            <div class="kicker">{contactPage.sidebar.locationHeading}</div>
+            <p class="body">{contactPage.sidebar.locationBody}</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
