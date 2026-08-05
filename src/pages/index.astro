@@ -1,899 +1,567 @@
----
-const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Work", href: "#work" },
-  { label: "Activities", href: "#activities" },
-  { label: "Impact", href: "#impact" },
-  { label: "Collab", href: "#collaborate" },
-  { label: "Contact", href: "#contact" }
-];
-
-const workCards = [
-  {
-    title: "Workshops",
-    text: "We host community workshops every two months at San Leandro Library, with youth-friendly topics that make local environmental action easier to understand.",
-    tag: "Every 2 months"
-  },
-  {
-    title: "Volunteer Opportunities",
-    text: "We connect students with conservation-minded service opportunities that support neighborhoods, outdoor spaces, and community awareness.",
-    tag: "Take action"
-  },
-  {
-    title: "Education Posts",
-    text: "Through short, accessible posts, we share climate facts, sustainability tips, and conservation ideas students can use in everyday life.",
-    tag: "Learn locally"
-  },
-  {
-    title: "Collaborations",
-    text: "We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people.",
-    tag: "Partner up"
-  }
-];
-
-const activities = [
-  {
-    title: "Library Workshops",
-    text: "Join the every-two-month workshop series at San Leandro Library for climate learning, hands-on projects, and conversation.",
-    meta: "San Leandro Library"
-  },
-  {
-    title: "Community Volunteering",
-    text: "Take part in local opportunities that help students contribute time, energy, and care to the places around them.",
-    meta: "Youth service"
-  },
-  {
-    title: "Climate Education",
-    text: "Follow along for student-centered posts about recycling, conservation, sustainability, and environmental action.",
-    meta: "@youth_conservation"
-  }
-];
-
-const impactItems = [
-  {
-    value: "Youth-led",
-    label: "Built by students for students, families, and local neighbors."
-  },
-  {
-    value: "2 months",
-    label: "Workshop rhythm at San Leandro Library."
-  },
-  {
-    value: "East Bay",
-    label: "Focused on San Leandro, San Lorenzo, and nearby communities."
-  }
-];
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Bay Area Youth Conservation is a youth-led group bringing climate education, community workshops, and conservation action to San Leandro, San Lorenzo, and nearby Bay Area communities."
-    />
-    <title>Bay Area Youth Conservation</title>
-    <link rel="icon" type="image/png" href="/assets/bayc-logo.png" />
-  </head>
-  <body>
-    <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Bay Area Youth Conservation home">
-        <img src="/assets/bayc-logo.png" alt="" width="52" height="52" />
-        <span>Bay Area Youth Conservation</span>
-      </a>
-      <nav>
-        <ul>
-          {navItems.map((item) => (
-            <li><a href={item.href}>{item.label}</a></li>
-          ))}
-        </ul>
-      </nav>
-      <a class="nav-cta" href="mailto:youthconservation26@gmail.com">Email Us</a>
-    </header>
-
-    <main id="top">
-      <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Youth-led conservation in the Bay Area</p>
-          <h1 id="hero-title">Helping local students turn climate care into community action.</h1>
-          <p class="hero-text">
-            Bay Area Youth Conservation brings young people together through climate education,
-            hands-on volunteer opportunities, and community workshops in the San Leandro and San Lorenzo area.
-          </p>
-          <div class="cta-row" aria-label="Primary actions">
-            <a class="button button-primary" href="#activities">Join a Workshop</a>
-            <a class="button button-secondary" href="#contact">Contact Us</a>
-          </div>
-        </div>
-
-        <div class="hero-art" aria-label="Bay Area Youth Conservation visual identity">
-          <div class="hero-logo-card">
-            <img src="/assets/bayc-logo.png" alt="Bay Area Youth Conservation hummingbird logo" />
-          </div>
-          <div class="floating-note note-a">
-            <span>Workshops</span>
-            <strong>Every 2 months</strong>
-          </div>
-          <div class="floating-note note-b">
-            <span>Focus area</span>
-            <strong>San Leandro + San Lorenzo</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="intro-band" id="about" aria-labelledby="about-title">
-        <div class="section-shell split">
-          <div>
-            <p class="eyebrow">Who We Are</p>
-            <h2 id="about-title">A youth group making conservation approachable.</h2>
-          </div>
-          <p>
-            Bay Area Youth Conservation is focused on making conservation approachable for
-            students, families, and local neighbors. We share climate education, create space
-            for youth involvement, and connect people with practical ways to care for the Bay
-            Area environment, starting in San Leandro and San Lorenzo.
-          </p>
-        </div>
-      </section>
-
-      <section class="section-shell" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="eyebrow">What We Do</p>
-          <h2 id="work-title">Education, service, and local partnerships.</h2>
-        </div>
-        <div class="card-grid">
-          {workCards.map((card) => (
-            <article class="work-card">
-              <span>{card.tag}</span>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section class="activities-band" id="activities" aria-labelledby="activities-title">
-        <div class="section-shell activities-layout">
-          <div class="section-heading">
-            <p class="eyebrow">Upcoming / Recent Activities</p>
-            <h2 id="activities-title">A community feed, built for real-world action.</h2>
-            <p>
-              BAYC shares workshop announcements, recaps, and simple conservation education
-              through Instagram-style posts that are easy for students to follow and share.
-            </p>
-          </div>
-
-          <div class="feed-preview">
-            <img
-              src="/assets/bayc-social-reference.png"
-              alt="A collage of Bay Area Youth Conservation social media posts about workshops, recycling, and local activities"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="activity-cards">
-            {activities.map((activity) => (
-              <article class="activity-card">
-                <p>{activity.meta}</p>
-                <h3>{activity.title}</h3>
-                <span>{activity.text}</span>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section class="section-shell impact" id="impact" aria-labelledby="impact-title">
-        <div class="section-heading">
-          <p class="eyebrow">Impact Snapshot</p>
-          <h2 id="impact-title">Rooted in local youth action.</h2>
-          <p>
-            These are current factual highlights from BAYC's existing public materials, not
-            inflated impact claims.
-          </p>
-        </div>
-        <div class="impact-grid">
-          {impactItems.map((item) => (
-            <article>
-              <strong>{item.value}</strong>
-              <p>{item.label}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section class="collab-band" id="collaborate" aria-labelledby="collab-title">
-        <div class="section-shell collab">
-          <div>
-            <p class="eyebrow">Collaborate With Us</p>
-            <h2 id="collab-title">Bring youth conservation education to your community space.</h2>
-          </div>
-          <div>
-            <p>
-              Bay Area Youth Conservation is open to local collaborations, workshop ideas,
-              volunteer projects, and education partnerships across the San Leandro and San Lorenzo area.
-            </p>
-            <a class="button button-primary" href="mailto:youthconservation26@gmail.com">Start a Collaboration</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer" id="contact">
-      <div class="section-shell footer-grid">
-        <div>
-          <img src="/assets/bayc-logo.png" alt="Bay Area Youth Conservation logo" width="84" height="84" />
-          <h2>Bay Area Youth Conservation</h2>
-          <p>
-            Youth-led climate education and conservation action in the Bay Area, with a focus
-            on San Leandro and San Lorenzo.
-          </p>
-        </div>
-        <address>
-          <span>Get in touch</span>
-          <a href="https://www.instagram.com/youth_conservation/">Instagram @youth_conservation</a>
-          <a href="mailto:youthconservation26@gmail.com">youthconservation26@gmail.com</a>
-        </address>
-      </div>
-    </footer>
-  </body>
-</html>
-
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bay Area Youth Conservation</title>
+<meta name="description" content="Youth-led climate education, workshops, and volunteer opportunities in San Leandro, San Lorenzo, and the East Bay." />
+<link rel="icon" type="image/png" href="/assets/bayc-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --aqua: #8be3e2;
-    --pale-green: #d1f7ac;
-    --leaf: #93bb74;
-    --olive: #95925b;
-    --olive-ink: #62602f;
-    --deep-green: #4c7031;
-    --off-white: #f6fff0;
-    --ink: #203819;
-    --paper: #fffdf0;
-    --line: rgba(76, 112, 49, 0.18);
-    --shadow: 0 24px 70px rgba(45, 73, 34, 0.18);
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-    background: var(--off-white);
-  }
-
-  body {
-    margin: 0;
-    color: var(--ink);
-    font-family:
-      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background:
-      radial-gradient(circle at 12% 18%, rgba(139, 227, 226, 0.55), transparent 26rem),
-      linear-gradient(180deg, var(--off-white) 0%, #ffffff 44%, var(--off-white) 100%);
-    line-height: 1.6;
-  }
-
-  body::before {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    content: "";
-    opacity: 0.24;
-    background-image:
-      linear-gradient(rgba(76, 112, 49, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(76, 112, 49, 0.08) 1px, transparent 1px);
-    background-size: 44px 44px;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
-  .section-shell {
-    width: min(1120px, calc(100% - 40px));
-    margin: 0 auto;
-  }
-
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    width: min(1160px, calc(100% - 28px));
-    min-height: 74px;
-    margin: 14px auto 0;
-    padding: 10px 14px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: rgba(246, 255, 240, 0.9);
-    box-shadow: 0 12px 36px rgba(32, 56, 25, 0.1);
-    backdrop-filter: blur(16px);
-  }
-
-  .brand {
-    display: inline-flex;
-    align-items: center;
-    min-width: 0;
-    gap: 10px;
-    color: var(--deep-green);
-    font-weight: 850;
-    line-height: 1.1;
-    text-decoration: none;
-  }
-
-  .brand img {
-    width: 52px;
-    height: 52px;
-    flex: 0 0 auto;
-    border-radius: 50%;
-  }
-
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  nav a,
-  .nav-cta {
-    display: inline-flex;
-    align-items: center;
-    min-height: 40px;
-    padding: 0 14px;
-    border-radius: 999px;
-    font-size: 0.92rem;
-    font-weight: 800;
-    text-decoration: none;
-  }
-
-  nav a:hover,
-  nav a:focus-visible {
-    background: rgba(147, 187, 116, 0.2);
-  }
-
-  .nav-cta {
-    background: var(--deep-green);
-    color: white;
-  }
-
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.78fr);
-    align-items: center;
-    gap: 56px;
-    min-height: calc(100vh - 190px);
-    padding: 44px 0 58px;
-  }
-
-  .eyebrow {
-    margin: 0 0 12px;
-    color: var(--deep-green);
-    font-size: 0.82rem;
-    font-weight: 900;
-    letter-spacing: 0;
-    text-transform: uppercase;
-  }
-
-  h1,
-  h2,
-  h3,
-  p {
-    overflow-wrap: anywhere;
-  }
-
-  h1,
-  h2,
-  h3 {
-    margin: 0;
-    line-height: 1.02;
-    letter-spacing: 0;
-  }
-
-  h1 {
-    max-width: 770px;
-    font-size: clamp(3rem, 6vw, 5.45rem);
-    color: var(--deep-green);
-  }
-
-  h2 {
-    font-size: clamp(2.1rem, 4vw, 4.2rem);
-    color: var(--deep-green);
-  }
-
-  h3 {
-    color: var(--deep-green);
-    font-size: 1.35rem;
-  }
-
-  .hero-text {
-    max-width: 660px;
-    margin: 24px 0 0;
-    color: rgba(32, 56, 25, 0.82);
-    font-size: clamp(1.06rem, 1.9vw, 1.28rem);
-  }
-
-  .cta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 34px;
-  }
-
-  .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 50px;
-    padding: 0 22px;
-    border: 2px solid var(--deep-green);
-    border-radius: 999px;
-    font-weight: 900;
-    text-decoration: none;
-  }
-
-  .button-primary {
-    background: var(--deep-green);
-    color: white;
-    box-shadow: 0 14px 28px rgba(76, 112, 49, 0.24);
-  }
-
-  .button-secondary {
-    background: rgba(255, 255, 255, 0.54);
-    color: var(--deep-green);
-  }
-
-  .hero-art {
-    position: relative;
-    min-height: 500px;
-  }
-
-  .hero-logo-card {
-    position: absolute;
-    inset: 42px 20px auto auto;
-    width: min(440px, 100%);
-    padding: clamp(20px, 4vw, 34px);
-    border: 1px solid rgba(76, 112, 49, 0.2);
-    border-radius: 8px;
-    background:
-      linear-gradient(135deg, rgba(246, 255, 240, 0.94), rgba(255, 255, 255, 0.68)),
-      var(--off-white);
-    box-shadow: var(--shadow);
-    transform: rotate(2deg);
-  }
-
-  .hero-logo-card::before,
-  .feed-preview::before {
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    width: 108px;
-    height: 28px;
-    content: "";
-    background: rgba(149, 146, 91, 0.36);
-    transform: translateX(-50%) rotate(-3deg);
-  }
-
-  .hero-logo-card img {
-    width: 100%;
-    border-radius: 8px;
-  }
-
-  .floating-note {
-    position: absolute;
-    display: grid;
-    gap: 3px;
-    width: 198px;
-    padding: 18px;
-    border: 1px solid rgba(76, 112, 49, 0.16);
-    border-radius: 8px;
-    background: var(--paper);
-    box-shadow: 0 16px 38px rgba(32, 56, 25, 0.14);
-  }
-
-  .floating-note span {
-    color: var(--olive-ink);
-    font-size: 0.8rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-
-  .floating-note strong {
-    color: var(--deep-green);
-    font-size: 1.15rem;
-    line-height: 1.12;
-  }
-
-  .note-a {
-    top: 6px;
-    left: 2px;
-    background: var(--pale-green);
-    transform: rotate(-5deg);
-  }
-
-  .note-b {
-    right: 0;
-    bottom: 20px;
-    background: var(--aqua);
-    transform: rotate(4deg);
-  }
-
-  .intro-band,
-  .activities-band,
-  .collab-band {
-    padding: 86px 0;
-  }
-
-  .intro-band {
-    background: var(--deep-green);
-    color: var(--off-white);
-  }
-
-  .intro-band .eyebrow,
-  .intro-band h2 {
-    color: var(--off-white);
-  }
-
-  .split,
-  .collab {
-    display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
-    gap: 56px;
-    align-items: start;
-  }
-
-  .split p:last-child,
-  .collab p {
-    margin: 0;
-    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
-  }
-
-  .section-heading {
-    max-width: 740px;
-    margin-bottom: 34px;
-  }
-
-  .section-heading p:not(.eyebrow) {
-    margin: 16px 0 0;
-    color: rgba(32, 56, 25, 0.76);
-    font-size: 1.05rem;
-  }
-
-  #work,
-  .impact {
-    padding: 96px 0;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .work-card,
-  .activity-card,
-  .impact-grid article {
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.72);
-    box-shadow: 0 16px 38px rgba(32, 56, 25, 0.08);
-  }
-
-  .work-card {
-    min-height: 278px;
-    padding: 24px;
-  }
-
-  .work-card:nth-child(2) {
-    background: rgba(209, 247, 172, 0.42);
-  }
-
-  .work-card:nth-child(3) {
-    background: rgba(139, 227, 226, 0.36);
-  }
-
-  .work-card span {
-    display: inline-flex;
-    margin-bottom: 34px;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: rgba(76, 112, 49, 0.1);
-    color: var(--deep-green);
-    font-size: 0.78rem;
-    font-weight: 900;
-  }
-
-  .work-card p {
-    margin: 18px 0 0;
-    color: rgba(32, 56, 25, 0.74);
-  }
-
-  .activities-band {
-    background:
-      linear-gradient(90deg, rgba(209, 247, 172, 0.72), rgba(139, 227, 226, 0.48)),
-      var(--pale-green);
-  }
-
-  .activities-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.58fr);
-    gap: 34px;
-    align-items: start;
-  }
-
-  .feed-preview {
-    position: relative;
-    grid-column: 1 / -1;
-    min-height: 0;
-    overflow: hidden;
-    border: 1px solid rgba(76, 112, 49, 0.2);
-    border-radius: 8px;
-    background: var(--paper);
-    box-shadow: var(--shadow);
-    transform: rotate(0.7deg);
-  }
-
-  .feed-preview img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: left top;
-  }
-
-  .activity-cards {
-    display: grid;
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .activity-card {
-    min-height: 216px;
-    padding: 24px;
-    background: var(--paper);
-  }
-
-  .activity-card p {
-    margin: 0 0 24px;
-    color: var(--olive-ink);
-    font-size: 0.82rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-
-  .activity-card span {
-    display: block;
-    margin-top: 14px;
-    color: rgba(32, 56, 25, 0.74);
-  }
-
-  .impact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .impact-grid article {
-    padding: 28px;
-    background: var(--deep-green);
-    color: var(--off-white);
-  }
-
-  .impact-grid strong {
-    display: block;
-    font-size: clamp(2.2rem, 4vw, 4rem);
-    line-height: 1;
-  }
-
-  .impact-grid p {
-    margin: 18px 0 0;
-    color: rgba(246, 255, 240, 0.84);
-  }
-
-  .collab-band {
-    background:
-      linear-gradient(110deg, rgba(139, 227, 226, 0.9), rgba(245, 179, 106, 0.34)),
-      var(--aqua);
-  }
-
-  .collab {
-    align-items: center;
-  }
-
-  .collab .button {
-    margin-top: 24px;
-  }
-
-  .site-footer {
-    padding: 64px 0 44px;
-    background: #243f1a;
-    color: var(--off-white);
-  }
-
-  .footer-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.45fr);
-    gap: 36px;
-  }
-
-  .footer-grid img {
-    border-radius: 50%;
-    background: var(--off-white);
-  }
-
-  .footer-grid h2 {
-    margin-top: 18px;
-    color: var(--off-white);
-    font-size: clamp(2rem, 4vw, 3.4rem);
-  }
-
-  .footer-grid p {
-    max-width: 620px;
-    color: rgba(246, 255, 240, 0.76);
-  }
-
-  address {
-    display: grid;
-    align-content: start;
-    gap: 14px;
-    font-style: normal;
-  }
-
-  address span {
-    color: var(--aqua);
-    font-size: 0.85rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-
-  address a {
-    color: var(--off-white);
-    font-weight: 800;
-  }
-
-  @media (max-width: 940px) {
-    .site-header {
-      align-items: flex-start;
-      border-radius: 28px;
-      flex-wrap: wrap;
+    --green-deep: #2E4A24;
+    --green-deeper: #1E3418;
+    --green-eyebrow: #456B2C;
+    --lime-pale: #F5FAEE;
+    --lime-soft: #DCF2C4;
+    --lime-bright: #CBF5A0;
+    --turquoise: #65E0DD;
+    --olive: #6B6533;
+    --ink: #26261F;
+    --ink-body: #4F4F47;
+    --ink-muted: #55554D;
+    --hair: rgba(0,0,0,0.07);
+    --ease: cubic-bezier(.25,.46,.45,.94);
+    --font-display: "Bitter", Georgia, serif;
+    --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:var(--ink); font-family:var(--font-body); -webkit-font-smoothing:antialiased; text-wrap:pretty; overflow-x:hidden; }
+  a { color:var(--green-deep); text-decoration:none; }
+  a:hover { color:var(--green-deeper); }
+  button, input, textarea, select { font-family:inherit; }
+  ::selection { background:var(--lime-bright); }
+
+  /* Layout */
+  .wrap { max-width:1180px; margin:0 auto; }
+  .wrap-nav { max-width:1240px; margin:0 auto; padding:0 clamp(20px,4vw,56px); min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .sec { padding: clamp(64px,8vw,110px) clamp(20px,4vw,56px); }
+  .sec-sm { padding: clamp(48px,6vw,84px) clamp(20px,4vw,56px); }
+  .band-pale { background:var(--lime-pale); border-top:1px solid rgba(0,0,0,0.06); border-bottom:1px solid rgba(0,0,0,0.06); }
+  .band-green { background:var(--green-deep); }
+
+  /* Type */
+  .eyebrow { font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--green-eyebrow); }
+  .kicker { font-size:11.5px; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--olive); }
+  h1.display { font-family:var(--font-display); font-weight:700; font-size:clamp(36px,5.4vw,62px); line-height:1.08; letter-spacing:-.02em; color:var(--green-deep); margin:26px 0 0; }
+  h1.page { font-family:var(--font-display); font-weight:700; font-size:clamp(32px,4.4vw,52px); line-height:1.1; letter-spacing:-.02em; color:var(--green-deep); margin:14px 0 0; }
+  h2.sect { font-family:var(--font-display); font-weight:700; font-size:clamp(28px,3.4vw,42px); line-height:1.15; letter-spacing:-.02em; color:var(--green-deep); margin:14px 0 0; }
+  .card-title { font-family:var(--font-display); font-weight:700; font-size:20px; color:var(--green-deep); margin:12px 0 0; letter-spacing:-.01em; }
+  .lede { font-size:clamp(16px,1.3vw,18px); line-height:1.65; color:var(--ink-body); }
+  .body { font-size:16.5px; line-height:1.75; color:var(--ink-body); }
+  .body-sm { font-size:15px; line-height:1.65; color:var(--ink-muted); }
+
+  /* Buttons */
+  .btn { display:inline-block; font-size:15px; font-weight:600; padding:13px 26px; border-radius:9999px; border:none; cursor:pointer; transition:background 200ms var(--ease), border-color 200ms var(--ease); }
+  .btn-primary { background:var(--green-deep); color:#fff; }
+  .btn-primary:hover { background:var(--green-deeper); color:#fff; }
+  .btn-ghost { background:#fff; color:var(--green-deep); border:1px solid rgba(46,74,36,.3); }
+  .btn-ghost:hover { border-color:var(--turquoise); }
+  .btn-onGreen { background:#fff; color:var(--green-deep); }
+  .btn-onGreen:hover { background:#E4F7C9; }
+  .btn-nav { background:var(--green-deep); color:#fff; font-size:14.5px; font-weight:600; padding:9px 20px; border:none; border-radius:9999px; cursor:pointer; transition:background 200ms var(--ease); }
+  .btn-nav:hover { background:var(--green-deeper); }
+  .link-btn { background:none; border:none; padding:0; cursor:pointer; font-size:15px; font-weight:600; color:var(--green-deep); border-bottom:1px solid rgba(46,74,36,.35); }
+  .link-btn:hover { border-bottom-color:var(--turquoise); }
+
+  /* Nav */
+  header.site { position:sticky; top:0; z-index:50; --nav-anchor:1; background:rgba(255,255,255,.9); backdrop-filter:blur(12px); border-bottom:1px solid var(--hair); }
+  .brand { display:flex; align-items:center; gap:10px; flex-shrink:0; background:none; border:none; padding:0; cursor:pointer; text-align:left; }
+  .brand img { width:34px; height:34px; border-radius:50%; object-fit:contain; }
+  .brand span { font-family:var(--font-display); font-weight:700; font-size:17px; letter-spacing:-.015em; color:var(--green-deep); line-height:1.1; }
+  nav.site { display:flex; align-items:center; gap:clamp(12px,1.8vw,26px); flex-wrap:wrap; padding:8px 0; }
+  .navlink { background:none; border:none; padding:4px 0; cursor:pointer; font-size:14.5px; font-weight:500; color:#3D3D36; border-bottom:2px solid transparent; }
+  .navlink[aria-current="page"] { border-bottom-color:var(--green-deep); }
+
+  /* Cards */
+  .card { background:#fff; border:1px solid rgba(0,0,0,.07); border-radius:16px; padding:26px; box-shadow:0 1px 2px rgba(0,0,0,.04); transition:box-shadow 200ms var(--ease); }
+  .card:hover { box-shadow:0 8px 24px rgba(0,0,0,.08); }
+  .card-lg { background:#fff; border:1px solid rgba(0,0,0,.07); border-radius:18px; padding:clamp(24px,3vw,36px); box-shadow:0 1px 2px rgba(0,0,0,.04); }
+  .grid { display:grid; gap:20px; }
+  .grid-4 { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+  .grid-3 { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+  .grid-team { grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:24px; }
+  .split { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(32px,5vw,72px); align-items:center; }
+
+  /* Photo frames */
+  .frame { padding:12px; background:var(--lime-soft); border-radius:22px; }
+  .frame img, .photo { width:100%; display:block; border-radius:16px; object-fit:cover; background:var(--lime-pale); }
+  .photo-placeholder { display:flex; align-items:center; justify-content:center; border:1px dashed rgba(46,74,36,.3); border-radius:16px; background:var(--lime-pale); color:var(--olive); font-size:13px; text-align:center; padding:16px; }
+
+  /* Forms */
+  .field { display:flex; flex-direction:column; gap:7px; }
+  .field span { font-size:12px; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--olive); }
+  .field input, .field select, .field textarea { font-size:15px; padding:12px 14px; border:1px solid rgba(0,0,0,.16); border-radius:8px; background:#fff; color:var(--ink); outline:none; }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color:var(--green-deep); }
+  .field textarea { resize:vertical; line-height:1.6; }
+
+  /* Reveal */
+  [data-reveal] { opacity:0; transform:translateY(16px); transition:opacity 600ms var(--ease), transform 600ms var(--ease); }
+  [data-reveal].is-visible { opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] { opacity:1; transform:none; transition:none; }
+  }
+
+  /* Mobile nav */
+  .nav-toggle { display:none; align-items:center; justify-content:center; width:42px; height:42px; background:none; border:1px solid rgba(0,0,0,.12); border-radius:10px; cursor:pointer; padding:0; }
+  .nav-toggle:focus-visible { outline:2px solid var(--green-deep); outline-offset:2px; }
+  .nav-toggle .bar { display:block; width:18px; height:2px; background:var(--green-deep); border-radius:2px; transition:transform 200ms var(--ease), opacity 200ms var(--ease); }
+  .nav-toggle .bar + .bar { margin-top:4px; }
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform:translateY(6px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(2) { opacity:0; }
+  .nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
+
+  @media (max-width: 860px) {
+    .wrap-nav { flex-wrap:nowrap; min-height:60px; }
+    .brand span { font-size:15px; max-width:190px; }
+    .nav-toggle { display:flex; flex-direction:column; }
+    nav.site {
+      position:absolute; top:100%; left:0; right:0;
+      display:none; flex-direction:column; align-items:stretch; gap:0;
+      background:#fff; border-bottom:1px solid var(--hair);
+      box-shadow:0 12px 24px rgba(0,0,0,.08);
+      padding:8px clamp(20px,4vw,56px) 20px;
     }
-
-    nav {
-      order: 3;
-      width: 100%;
+    header.site.is-open nav.site { display:flex; }
+    nav.site .navlink {
+      text-align:left; font-size:17px; padding:14px 0; min-height:48px;
+      border-bottom:1px solid rgba(0,0,0,.06);
     }
-
-    nav ul {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .hero,
-    .split,
-    .collab,
-    .activities-layout,
-    .footer-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .hero {
-      gap: 20px;
-      min-height: auto;
-      padding: 44px 0 58px;
-    }
-
-    .hero-art {
-      min-height: 420px;
-    }
-
-    .hero-logo-card {
-      inset: 48px 0 auto auto;
-      width: min(400px, 92%);
-    }
-
-    .card-grid,
-    .activity-cards,
-    .impact-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .feed-preview,
-    .feed-preview img {
-      min-height: 0;
-      height: auto;
-    }
+    nav.site .navlink[aria-current="page"] { border-bottom-color:rgba(0,0,0,.06); color:var(--green-deep); font-weight:600; }
+    nav.site .btn-nav { margin-top:16px; width:100%; padding:14px 20px; font-size:16px; }
   }
 
-  @media (max-width: 640px) {
-    .section-shell {
-      width: min(100% - 28px, 1120px);
-    }
-
-    .site-header {
-      width: min(100% - 20px, 1160px);
-      gap: 10px;
-    }
-
-    .brand span {
-      max-width: 168px;
-      font-size: 0.92rem;
-    }
-
-    .brand img {
-      width: 46px;
-      height: 46px;
-    }
-
-    .nav-cta {
-      min-height: 38px;
-      padding: 0 12px;
-      font-size: 0.86rem;
-      white-space: nowrap;
-    }
-
-    nav a {
-      min-height: 36px;
-      padding: 0 10px;
-      font-size: 0.84rem;
-    }
-
-    h1 {
-      font-size: clamp(2.55rem, 12.7vw, 3.9rem);
-    }
-
-    .hero {
-      padding-bottom: 44px;
-    }
-
-    .button {
-      width: 100%;
-    }
-
-    .hero-art {
-      display: none;
-    }
-
-    .floating-note {
-      width: 168px;
-      padding: 14px;
-    }
-
-    .note-b {
-      right: 4px;
-    }
-
-    .card-grid,
-    .activity-cards,
-    .impact-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .intro-band,
-    .activities-band,
-    .collab-band,
-    #work,
-    .impact {
-      padding: 68px 0;
-    }
-
-    .work-card,
-    .activity-card {
-      min-height: auto;
-    }
+  @media (max-width: 600px) {
+    h1.display { font-size:clamp(30px,8vw,40px); margin-top:20px; }
+    h1.page { font-size:clamp(28px,7.5vw,36px); }
+    h2.sect { font-size:clamp(24px,6.5vw,32px); }
+    .lede, .body { font-size:16px; }
+    .card, .card-lg { padding:22px; }
+    .btn { width:100%; text-align:center; }
+    .grid-team { grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:18px; }
+    .frame { padding:8px; border-radius:16px; }
   }
+
+  [hidden] { display:none !important; }
 </style>
+</head>
+<body>
+
+<header class="site" id="site-header" style="position:sticky">
+  <div class="wrap-nav" style="position:relative">
+    <button type="button" class="brand" data-nav="home">
+      <img src="/assets/bayc-logo.png" alt="Bay Area Youth Conservation logo" />
+      <span>Bay Area Youth Conservation</span>
+    </button>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav class="site" id="site-nav">
+      <button type="button" class="navlink" data-nav="home">Home</button>
+      <button type="button" class="navlink" data-nav="work">What We Do</button>
+      <button type="button" class="navlink" data-nav="team">Our Team</button>
+      <button type="button" class="navlink" data-nav="involved">Get Involved</button>
+      <button type="button" class="btn-nav" data-nav="contact">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HOME ============ -->
+<main data-page="home">
+  <section style="background:var(--lime-pale);border-bottom:1px solid rgba(0,0,0,.06);padding:clamp(56px,9vw,110px) clamp(20px,4vw,56px) clamp(52px,8vw,96px)">
+    <div style="max-width:880px;margin:0 auto;text-align:center" data-reveal>
+      <div class="eyebrow" style="display:inline-block;border:1px solid rgba(46,74,36,.22);background:#fff;padding:7px 15px;border-radius:9999px">Youth-led conservation in the Bay Area</div>
+      <h1 class="display">Helping local students turn climate care into community action.</h1>
+      <p class="lede" style="max-width:640px;margin:22px auto 0">Bay Area Youth Conservation brings young people together through climate education, hands-on volunteer opportunities, and community workshops in the San Leandro and San Lorenzo area.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px">
+        <button type="button" class="btn btn-primary" data-nav="involved">Get involved</button>
+        <button type="button" class="btn btn-ghost" data-nav="contact">Ask us a question</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-green" style="padding:clamp(40px,5vw,60px) clamp(20px,4vw,56px)">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="text-align:center;font-family:var(--font-display);font-weight:600;font-size:clamp(20px,2vw,26px);color:#F2F5F0;letter-spacing:-.01em">Rooted in local youth action.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(20px,3vw,36px);margin-top:32px" data-reveal>
+        <div style="text-align:center;padding:0 12px">
+          <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3vw,38px);color:#fff;letter-spacing:-.02em">Youth-led</div>
+          <div style="margin-top:8px;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.82)">Built by students for students, families, and local neighbors.</div>
+        </div>
+        <div style="text-align:center;padding:0 12px;border-left:1px solid rgba(101,224,221,.4)">
+          <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3vw,38px);color:#fff;letter-spacing:-.02em">2 months</div>
+          <div style="margin-top:8px;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.82)">Workshop rhythm at San Leandro Library.</div>
+        </div>
+        <div style="text-align:center;padding:0 12px;border-left:1px solid rgba(101,224,221,.4)">
+          <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3vw,38px);color:#fff;letter-spacing:-.02em">East Bay</div>
+          <div style="margin-top:8px;font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.82)">Focused on San Leandro, San Lorenzo, and nearby communities.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap split">
+      <div data-reveal>
+        <div class="eyebrow">Who We Are</div>
+        <h2 class="sect">A youth group making conservation approachable.</h2>
+        <p class="body" style="margin:20px 0 0">Bay Area Youth Conservation is focused on making conservation approachable for students, families, and local neighbors. We share climate education, create space for youth involvement, and connect people with practical ways to care for the Bay Area environment, starting in San Leandro and San Lorenzo.</p>
+        <button type="button" class="link-btn" style="margin-top:24px" data-nav="work">See what we do</button>
+      </div>
+      <div class="frame" data-reveal>
+        <div class="photo-placeholder" style="height:clamp(280px,32vw,420px)">Replace with a workshop or volunteer-day photo</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band-pale">
+    <div class="wrap">
+      <div style="max-width:720px" data-reveal>
+        <div class="eyebrow">What We Do</div>
+        <h2 class="sect">Education, service, and local partnerships.</h2>
+      </div>
+      <div class="grid grid-4" style="margin-top:44px" data-reveal>
+        <div class="card">
+          <div class="kicker">Every 2 months</div>
+          <h3 class="card-title">Workshops</h3>
+          <p class="body-sm" style="margin:10px 0 0">We host community workshops every two months at San Leandro Library, with youth-friendly topics that make local environmental action easier to understand.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Take action</div>
+          <h3 class="card-title">Volunteer Opportunities</h3>
+          <p class="body-sm" style="margin:10px 0 0">We connect students with conservation-minded service opportunities that support neighborhoods, outdoor spaces, and community awareness.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Learn locally</div>
+          <h3 class="card-title">Education Posts</h3>
+          <p class="body-sm" style="margin:10px 0 0">Through short, accessible posts, we share climate facts, sustainability tips, and conservation ideas students can use in everyday life.</p>
+        </div>
+        <div class="card">
+          <div class="kicker">Partner up</div>
+          <h3 class="card-title">Collaborations</h3>
+          <p class="body-sm" style="margin:10px 0 0">We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div style="max-width:880px;margin:0 auto;text-align:center" data-reveal>
+      <div class="eyebrow">Have a question</div>
+      <h2 class="sect" style="font-size:clamp(26px,3.2vw,40px)">Not sure where you fit in? Just ask.</h2>
+      <p class="body" style="margin:18px auto 0;max-width:600px">Whether you want to attend a workshop, volunteer, or bring BAYC to your school or community space, send us a note and we will get back to you.</p>
+      <button type="button" class="btn btn-primary" style="margin-top:28px" data-nav="contact">Go to contact form</button>
+    </div>
+  </section>
+</main>
+
+<!-- ============ WHAT WE DO ============ -->
+<main data-page="work" hidden>
+  <section class="sec-sm" style="background:var(--lime-pale);border-bottom:1px solid rgba(0,0,0,.06)">
+    <div style="max-width:820px;margin:0 auto;text-align:center">
+      <div class="eyebrow">What We Do</div>
+      <h1 class="page">Education, service, and local partnerships.</h1>
+      <p class="body" style="max-width:620px;margin:20px auto 0">Four ways we work in San Leandro, San Lorenzo, and nearby communities.</p>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div style="max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:20px">
+      <div class="card-lg" data-reveal>
+        <div class="kicker">Every 2 months</div>
+        <h2 class="card-title" style="font-size:clamp(22px,2.4vw,28px);font-family:var(--font-display);font-weight:700;color:var(--green-deep);margin:12px 0 0;letter-spacing:-.015em">Workshops</h2>
+        <p class="body" style="margin:12px 0 0;max-width:640px;font-size:16px;line-height:1.7">We host community workshops every two months at San Leandro Library, with youth-friendly topics that make local environmental action easier to understand.</p>
+      </div>
+      <div class="card-lg" data-reveal>
+        <div class="kicker">Take action</div>
+        <h2 class="card-title" style="font-size:clamp(22px,2.4vw,28px);font-family:var(--font-display);font-weight:700;color:var(--green-deep);margin:12px 0 0;letter-spacing:-.015em">Volunteer Opportunities</h2>
+        <p class="body" style="margin:12px 0 0;max-width:640px;font-size:16px;line-height:1.7">We connect students with conservation-minded service opportunities that support neighborhoods, outdoor spaces, and community awareness.</p>
+      </div>
+      <div class="card-lg" data-reveal>
+        <div class="kicker">Learn locally</div>
+        <h2 class="card-title" style="font-size:clamp(22px,2.4vw,28px);font-family:var(--font-display);font-weight:700;color:var(--green-deep);margin:12px 0 0;letter-spacing:-.015em">Education Posts</h2>
+        <p class="body" style="margin:12px 0 0;max-width:640px;font-size:16px;line-height:1.7">Through short, accessible posts, we share climate facts, sustainability tips, and conservation ideas students can use in everyday life.</p>
+      </div>
+      <div class="card-lg" data-reveal>
+        <div class="kicker">Partner up</div>
+        <h2 class="card-title" style="font-size:clamp(22px,2.4vw,28px);font-family:var(--font-display);font-weight:700;color:var(--green-deep);margin:12px 0 0;letter-spacing:-.015em">Collaborations</h2>
+        <p class="body" style="margin:12px 0 0;max-width:640px;font-size:16px;line-height:1.7">We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-sm" style="background:var(--lime-pale);border-top:1px solid rgba(0,0,0,.06)">
+    <div style="max-width:1000px;margin:0 auto">
+      <div style="max-width:700px" data-reveal>
+        <div class="eyebrow">Upcoming / Recent Activities</div>
+        <h2 class="sect" style="font-size:clamp(24px,2.8vw,34px)">A community feed, built for real-world action.</h2>
+        <p class="body" style="margin:16px 0 0;font-size:16px;line-height:1.7">BAYC shares workshop announcements, recaps, and simple conservation education through Instagram-style posts that are easy for students to follow and share.</p>
+      </div>
+      <div style="margin-top:32px;padding:14px;background:var(--lime-soft);border-radius:22px" data-reveal>
+        <img src="/assets/bayc-social-reference.png" alt="Collage of Bay Area Youth Conservation Instagram posts" style="width:100%;display:block;border-radius:14px;object-fit:contain;background:#fff" />
+      </div>
+      <div style="margin-top:20px"><a href="https://www.instagram.com/youth_conservation/" style="font-size:15px;font-weight:600">Follow @youth_conservation</a></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ TEAM ============ -->
+<main data-page="team" hidden>
+  <section class="sec-sm" style="background:var(--lime-pale);border-bottom:1px solid rgba(0,0,0,.06)">
+    <div style="max-width:820px;margin:0 auto;text-align:center">
+      <div class="eyebrow">Our Team</div>
+      <h1 class="page">The students behind BAYC.</h1>
+      <p class="body" style="max-width:600px;margin:20px auto 0">BAYC is run by local students who plan the workshops, write the education posts, and coordinate with libraries, schools, and community groups.</p>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div class="wrap grid grid-team" data-reveal>
+      <div style="text-align:center">
+        <div class="photo-placeholder" style="height:260px">Photo</div>
+        <div class="kicker" style="margin-top:16px">Role</div>
+        <div style="margin-top:6px;font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--green-deep);letter-spacing:-.01em">Name</div>
+      </div>
+      <div style="text-align:center">
+        <div class="photo-placeholder" style="height:260px">Photo</div>
+        <div class="kicker" style="margin-top:16px">Role</div>
+        <div style="margin-top:6px;font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--green-deep);letter-spacing:-.01em">Name</div>
+      </div>
+      <div style="text-align:center">
+        <div class="photo-placeholder" style="height:260px">Photo</div>
+        <div class="kicker" style="margin-top:16px">Role</div>
+        <div style="margin-top:6px;font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--green-deep);letter-spacing:-.01em">Name</div>
+      </div>
+      <div style="text-align:center">
+        <div class="photo-placeholder" style="height:260px">Photo</div>
+        <div class="kicker" style="margin-top:16px">Role</div>
+        <div style="margin-top:6px;font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--green-deep);letter-spacing:-.01em">Name</div>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:36px;padding:20px 24px;background:var(--lime-pale);border:1px solid var(--hair);border-radius:14px;font-size:14.5px;line-height:1.65;color:var(--ink-body)">Placeholder cards. Replace each with a real name, role, and headshot, then delete this note.</div>
+  </section>
+</main>
+
+<!-- ============ GET INVOLVED ============ -->
+<main data-page="involved" hidden>
+  <section class="sec-sm" style="background:var(--lime-pale);border-bottom:1px solid rgba(0,0,0,.06)">
+    <div style="max-width:820px;margin:0 auto;text-align:center">
+      <div class="eyebrow">Get Involved</div>
+      <h1 class="page">Three ways to join in.</h1>
+      <p class="body" style="max-width:600px;margin:20px auto 0">You do not need experience or a long-term commitment. Pick whichever fits, and reach out.</p>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div class="wrap grid grid-3" style="gap:22px" data-reveal>
+      <div class="card" style="padding:28px">
+        <div class="kicker">San Leandro Library</div>
+        <h2 class="card-title" style="font-family:var(--font-display);font-weight:700;font-size:21px;color:var(--green-deep);margin:12px 0 0;letter-spacing:-.01em">Attend a workshop</h2>
+        <p class="body-sm" style="margin:10px 0 0;line-height:1.7">Join the every-two-month workshop series at San Leandro Library for climate learning, hands-on projects, and conversation.</p>
+      </div>
+      <div class="card" style="padding:28px">
+        <div class="kicker">Youth service</div>
+        <h2 class="card-title" style="font-family:var(--font-display);font-weight:700;font-size:21px;color:var(--green-deep);margin:12px 0 0;letter-spacing:-.01em">Volunteer with us</h2>
+        <p class="body-sm" style="margin:10px 0 0;line-height:1.7">Take part in local opportunities that help students contribute time, energy, and care to the places around them.</p>
+      </div>
+      <div class="card" style="padding:28px">
+        <div class="kicker">Schools, clubs, libraries</div>
+        <h2 class="card-title" style="font-family:var(--font-display);font-weight:700;font-size:21px;color:var(--green-deep);margin:12px 0 0;letter-spacing:-.01em">Collaborate</h2>
+        <p class="body-sm" style="margin:10px 0 0;line-height:1.7">We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-green" style="padding:clamp(56px,7vw,96px) clamp(20px,4vw,56px)">
+    <div style="max-width:820px;margin:0 auto;text-align:center" data-reveal>
+      <div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7)">Collaborate With Us</div>
+      <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(26px,3.4vw,42px);line-height:1.14;letter-spacing:-.02em;color:#fff;margin:14px 0 0">Bring youth conservation education to your community space.</h2>
+      <p style="margin:20px auto 0;max-width:620px;font-size:16.5px;line-height:1.7;color:rgba(255,255,255,.82)">Bay Area Youth Conservation is open to local collaborations, workshop ideas, volunteer projects, and education partnerships across the San Leandro and San Lorenzo area.</p>
+      <button type="button" class="btn btn-onGreen" style="margin-top:30px" data-nav="contact">Start a collaboration</button>
+    </div>
+  </section>
+</main>
+
+<!-- ============ CONTACT ============ -->
+<main data-page="contact" hidden>
+  <section class="sec-sm" style="background:var(--lime-pale);border-bottom:1px solid rgba(0,0,0,.06)">
+    <div style="max-width:820px;margin:0 auto;text-align:center">
+      <div class="eyebrow">Contact</div>
+      <h1 class="page">Ask us anything.</h1>
+      <p class="body" style="max-width:580px;margin:20px auto 0">Questions about a workshop, volunteering, or working together — send a note and we will reply by email.</p>
+    </div>
+  </section>
+
+  <section class="sec-sm">
+    <div style="max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,64px);align-items:start">
+      <div>
+        <div id="contact-success" hidden style="background:var(--lime-soft);border:1px solid rgba(46,74,36,.18);border-radius:16px;padding:28px">
+          <h2 style="font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--green-deep);margin:0;letter-spacing:-.01em">Thanks for reaching out.</h2>
+          <p style="margin:12px 0 0;font-size:15px;line-height:1.7;color:#3D4A33">Your email draft opened in your mail app. If it did not, write to youthconservation26@gmail.com directly.</p>
+          <button type="button" id="contact-reset" class="link-btn" style="margin-top:18px">Send another message</button>
+        </div>
+
+        <form id="contact-form" style="display:flex;flex-direction:column;gap:18px">
+          <label class="field">
+            <span>Your name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label class="field">
+            <span>What is this about</span>
+            <select name="topic">
+              <option>A workshop</option>
+              <option>Volunteering</option>
+              <option>Collaborating with BAYC</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start">Send message</button>
+          <p style="margin:0;font-size:13px;line-height:1.6;color:var(--olive)">This opens a prefilled email in your mail app, addressed to youthconservation26@gmail.com.</p>
+        </form>
+      </div>
+
+      <div style="background:var(--lime-pale);border:1px solid var(--hair);border-radius:18px;padding:28px">
+        <div class="kicker">Other ways to reach us</div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:18px">
+          <a href="mailto:youthconservation26@gmail.com" style="font-size:15.5px;font-weight:600">youthconservation26@gmail.com</a>
+          <a href="https://www.instagram.com/youth_conservation/" style="font-size:15.5px;font-weight:600">Instagram @youth_conservation</a>
+        </div>
+        <div style="margin-top:26px;padding-top:20px;border-top:1px solid rgba(0,0,0,.08)">
+          <div class="kicker">Where we work</div>
+          <p class="body" style="margin:10px 0 0;font-size:15px;line-height:1.7">San Leandro, San Lorenzo, and nearby East Bay communities. Workshops are held at San Leandro Library every two months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:var(--lime-pale);border-top:1px solid var(--hair);padding:clamp(52px,6vw,80px) clamp(20px,4vw,56px) 40px">
+  <div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,5vw,64px)">
+    <div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="/assets/bayc-logo.png" alt="" style="width:44px;height:44px;border-radius:50%;object-fit:contain" />
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:20px;letter-spacing:-.015em;color:var(--green-deep);margin:0;line-height:1.2">Bay Area Youth Conservation</h2>
+      </div>
+      <p style="margin:18px 0 0;max-width:420px;font-size:15px;line-height:1.7;color:var(--ink-muted)">Youth-led climate education and conservation action in the Bay Area, with a focus on San Leandro and San Lorenzo.</p>
+    </div>
+    <div>
+      <div class="kicker">Pages</div>
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:16px">
+        <button type="button" class="link-btn" style="border-bottom:none;font-weight:500" data-nav="home">Home</button>
+        <button type="button" class="link-btn" style="border-bottom:none;font-weight:500" data-nav="work">What We Do</button>
+        <button type="button" class="link-btn" style="border-bottom:none;font-weight:500" data-nav="team">Our Team</button>
+        <button type="button" class="link-btn" style="border-bottom:none;font-weight:500" data-nav="involved">Get Involved</button>
+      </div>
+    </div>
+    <div>
+      <div class="kicker">Get in touch</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+        <a href="https://www.instagram.com/youth_conservation/" style="font-size:15px;font-weight:500">Instagram @youth_conservation</a>
+        <a href="mailto:youthconservation26@gmail.com" style="font-size:15px;font-weight:500">youthconservation26@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:clamp(32px,4vw,56px);padding-top:22px;border-top:1px solid var(--hair);font-size:13px;color:var(--olive)">Bay Area Youth Conservation · San Leandro + San Lorenzo</div>
+</footer>
+
+<script>
+(function () {
+  var EMAIL = 'youthconservation26@gmail.com';
+  var pages = Array.prototype.slice.call(document.querySelectorAll('[data-page]'));
+  var navlinks = Array.prototype.slice.call(document.querySelectorAll('.navlink'));
+
+  function show(page) {
+    pages.forEach(function (m) { m.hidden = m.dataset.page !== page; });
+    navlinks.forEach(function (b) {
+      if (b.dataset.nav === page) { b.setAttribute('aria-current', 'page'); }
+      else { b.removeAttribute('aria-current'); }
+    });
+    if (location.hash.slice(1) !== page) { history.replaceState(null, '', '#' + page); }
+    window.scrollTo(0, 0);
+    reveal();
+  }
+
+  var header = document.getElementById('site-header');
+  var toggle = document.getElementById('nav-toggle');
+
+  function setMenu(open) {
+    header.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  toggle.addEventListener('click', function () {
+    setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setMenu(false);
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 860) setMenu(false);
+  });
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-nav]');
+    if (!t) return;
+    setMenu(false);
+    show(t.dataset.nav);
+  });
+
+  // Scroll reveals
+  var io = null;
+  function reveal() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('[data-reveal]').forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    if (!io) {
+      io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add('is-visible');
+          io.unobserve(en.target);
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    }
+    document.querySelectorAll('[data-page]:not([hidden]) [data-reveal]:not(.is-visible)').forEach(function (el) { io.observe(el); });
+  }
+
+  // Contact form -> prefilled mailto
+  var form = document.getElementById('contact-form');
+  var success = document.getElementById('contact-success');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = new FormData(form);
+      var subject = 'BAYC website: ' + (d.get('topic') || 'Question');
+      var body = 'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') +
+                 '\nTopic: ' + d.get('topic') + '\n\n' + d.get('message');
+      window.location.href = 'mailto:' + EMAIL +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+      form.hidden = true;
+      success.hidden = false;
+    });
+    document.getElementById('contact-reset').addEventListener('click', function () {
+      form.reset();
+      form.hidden = false;
+      success.hidden = true;
+    });
+  }
+
+  var start = location.hash.slice(1);
+  show(['home','work','team','involved','contact'].indexOf(start) > -1 ? start : 'home');
+})();
+</script>
+
+</body>
+</html>
