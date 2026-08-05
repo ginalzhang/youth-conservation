@@ -1,0 +1,32 @@
+{
+  "title": "Get Involved",
+  "description": "Attend a workshop, volunteer, or collaborate with Bay Area Youth Conservation.",
+  "header": {
+    "eyebrow": "Get Involved",
+    "heading": "Three ways to join in.",
+    "body": "You do not need experience or a long-term commitment. Pick whichever fits, and reach out."
+  },
+  "cards": [
+    {
+      "kicker": "San Leandro Library",
+      "heading": "Attend a workshop",
+      "body": "Join the every-two-month workshop series at San Leandro Library for climate learning, hands-on projects, and conversation."
+    },
+    {
+      "kicker": "Youth service",
+      "heading": "Volunteer with us",
+      "body": "Take part in local opportunities that help students contribute time, energy, and care to the places around them."
+    },
+    {
+      "kicker": "Schools, clubs, libraries",
+      "heading": "Collaborate",
+      "body": "We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people."
+    }
+  ],
+  "collaboration": {
+    "eyebrow": "Collaborate With Us",
+    "heading": "Bring youth conservation education to your community space.",
+    "body": "Bay Area Youth Conservation is open to local collaborations, workshop ideas, volunteer projects, and education partnerships across the San Leandro and San Lorenzo area.",
+    "cta": { "label": "Start a collaboration", "href": "/contact/" }
+  }
+}

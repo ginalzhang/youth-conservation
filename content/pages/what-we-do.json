@@ -1,0 +1,40 @@
+{
+  "title": "What We Do",
+  "description": "Four ways Bay Area Youth Conservation works in San Leandro, San Lorenzo, and nearby communities.",
+  "header": {
+    "eyebrow": "What We Do",
+    "heading": "Education, service, and local partnerships.",
+    "body": "Four ways we work in San Leandro, San Lorenzo, and nearby communities."
+  },
+  "workItems": [
+    {
+      "kicker": "Every 2 months",
+      "heading": "Workshops",
+      "body": "We host community workshops every two months at San Leandro Library, with youth-friendly topics that make local environmental action easier to understand."
+    },
+    {
+      "kicker": "Take action",
+      "heading": "Volunteer Opportunities",
+      "body": "We connect students with conservation-minded service opportunities that support neighborhoods, outdoor spaces, and community awareness."
+    },
+    {
+      "kicker": "Learn locally",
+      "heading": "Education Posts",
+      "body": "Through short, accessible posts, we share climate facts, sustainability tips, and conservation ideas students can use in everyday life."
+    },
+    {
+      "kicker": "Partner up",
+      "heading": "Collaborations",
+      "body": "We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people."
+    }
+  ],
+  "socialFeed": {
+    "eyebrow": "Upcoming / Recent Activities",
+    "heading": "A community feed, built for real-world action.",
+    "body": "BAYC shares workshop announcements, recaps, and simple conservation education through Instagram-style posts that are easy for students to follow and share.",
+    "image": "/assets/bayc-social-reference.png",
+    "imageAlt": "Collage of Bay Area Youth Conservation Instagram posts",
+    "linkLabel": "Follow @youth_conservation",
+    "linkHref": "https://www.instagram.com/youth_conservation/"
+  }
+}
