@@ -1,0 +1,22 @@
+{
+  "siteName": "Bay Area Youth Conservation",
+  "defaultDescription": "Youth-led climate education, workshops, and volunteer opportunities in San Leandro, San Lorenzo, and the East Bay.",
+  "contactEmail": "youthconservation26@gmail.com",
+  "instagramUrl": "https://www.instagram.com/youth_conservation/",
+  "instagramLabel": "Instagram @youth_conservation",
+  "locationText": "San Leandro + San Lorenzo",
+  "navItems": [
+    { "label": "Home", "href": "/", "cta": false },
+    { "label": "What We Do", "href": "/what-we-do/", "cta": false },
+    { "label": "Our Team", "href": "/team/", "cta": false },
+    { "label": "Get Involved", "href": "/get-involved/", "cta": false },
+    { "label": "Contact", "href": "/contact/", "cta": true }
+  ],
+  "footer": {
+    "body": "Youth-led climate education and conservation action in the Bay Area, with a focus on San Leandro and San Lorenzo.",
+    "pagesHeading": "Pages",
+    "contactHeading": "Get in touch",
+    "note": "Bay Area Youth Conservation · San Leandro + San Lorenzo",
+    "adminLabel": "Admin"
+  }
+}

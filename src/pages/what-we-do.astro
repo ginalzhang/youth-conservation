@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { workPage, toPublicPath } from "../lib/content";
+---
+
+<BaseLayout title={workPage.title} description={workPage.description} currentPath="/what-we-do/">
+  <main>
+    <section class="sec-sm page-header">
+      <div class="page-header-inner">
+        <div class="eyebrow">{workPage.header.eyebrow}</div>
+        <h1 class="page">{workPage.header.heading}</h1>
+        <p class="body">{workPage.header.body}</p>
+      </div>
+    </section>
+
+    <section class="sec-sm">
+      <div class="wrap work-list">
+        {
+          workPage.workItems.map((item) => (
+            <article class="card-lg" data-reveal>
+              <div class="kicker">{item.kicker}</div>
+              <h2 class="card-title">{item.heading}</h2>
+              <p class="body">{item.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="sec-sm band-pale social-section">
+      <div class="wrap">
+        <div class="section-intro" data-reveal>
+          <div class="eyebrow">{workPage.socialFeed.eyebrow}</div>
+          <h2 class="sect">{workPage.socialFeed.heading}</h2>
+          <p class="body">{workPage.socialFeed.body}</p>
+        </div>
+        <div class="frame social-frame" data-reveal>
+          <img
+            src={toPublicPath(workPage.socialFeed.image)}
+            alt={workPage.socialFeed.imageAlt}
+            width="1480"
+            height="666"
+            loading="lazy"
+          />
+        </div>
+        <a class="link-btn social-link" href={workPage.socialFeed.linkHref}>
+          {workPage.socialFeed.linkLabel}
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

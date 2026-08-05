@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getInvolvedPage } from "../lib/content";
+---
+
+<BaseLayout
+  title={getInvolvedPage.title}
+  description={getInvolvedPage.description}
+  currentPath="/get-involved/"
+>
+  <main>
+    <section class="sec-sm page-header">
+      <div class="page-header-inner">
+        <div class="eyebrow">{getInvolvedPage.header.eyebrow}</div>
+        <h1 class="page">{getInvolvedPage.header.heading}</h1>
+        <p class="body">{getInvolvedPage.header.body}</p>
+      </div>
+    </section>
+
+    <section class="sec-sm">
+      <div class="wrap grid grid-3 involvement-grid" data-reveal>
+        {
+          getInvolvedPage.cards.map((card) => (
+            <article class="card">
+              <div class="kicker">{card.kicker}</div>
+              <h2 class="card-title small">{card.heading}</h2>
+              <p class="body-sm">{card.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="band-green collaborate-band">
+      <div data-reveal>
+        <div class="green-eyebrow">{getInvolvedPage.collaboration.eyebrow}</div>
+        <h2>{getInvolvedPage.collaboration.heading}</h2>
+        <p>{getInvolvedPage.collaboration.body}</p>
+        <a class="btn btn-on-green" href={getInvolvedPage.collaboration.cta.href}>
+          {getInvolvedPage.collaboration.cta.label}
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

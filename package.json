@@ -4,13 +4,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev --host 0.0.0.0",
-    "build": "astro build",
+    "dev": "tinacms dev -c \"astro dev --host 0.0.0.0\"",
+    "build": "node scripts/build.mjs",
     "preview": "astro preview --host 0.0.0.0",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.1.6"
+    "@astrojs/vercel": "^11.0.4",
+    "@tinacms/astro": "^0.6.1",
+    "astro": "^7.1.6",
+    "tinacms": "^3.11.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@tinacms/cli": "^2.5.6"
+  }
 }

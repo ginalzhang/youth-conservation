@@ -1,0 +1,28 @@
+{
+  "title": "Contact",
+  "description": "Contact Bay Area Youth Conservation about workshops, volunteering, and collaborations.",
+  "header": {
+    "eyebrow": "Contact",
+    "heading": "Ask us anything.",
+    "body": "Questions about a workshop, volunteering, or working together — send a note and we will reply by email."
+  },
+  "success": {
+    "heading": "Thanks for reaching out.",
+    "body": "Your email draft opened in your mail app. If it did not, write to youthconservation26@gmail.com directly.",
+    "resetLabel": "Send another message"
+  },
+  "form": {
+    "nameLabel": "Your name",
+    "emailLabel": "Email",
+    "topicLabel": "What is this about",
+    "topics": ["A workshop", "Volunteering", "Collaborating with BAYC", "Something else"],
+    "messageLabel": "Message",
+    "submitLabel": "Send message",
+    "note": "This opens a prefilled email in your mail app, addressed to youthconservation26@gmail.com."
+  },
+  "sidebar": {
+    "heading": "Other ways to reach us",
+    "locationHeading": "Where we work",
+    "locationBody": "San Leandro, San Lorenzo, and nearby East Bay communities. Workshops are held at San Leandro Library every two months."
+  }
+}
