@@ -66,10 +66,12 @@
   }
 
   html.js .site-header .bayc-nav-row .brand span {
+    font-size: 15px;
+    line-height: 1.2;
     min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
   }
 
   /* The nav becomes a dropdown panel anchored under the header.
