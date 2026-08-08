@@ -1,0 +1,40 @@
+{
+  "title": "Start a Chapter",
+  "description": "Start a Bay Area Youth Conservation chapter at your school, club, library, or community space.",
+  "header": {
+    "eyebrow": "Start a Chapter",
+    "heading": "Bring youth conservation education to your community.",
+    "body": "Interested in starting a Bay Area Youth Conservation chapter? Share a few details with us, and we will follow up with next steps."
+  },
+  "intro": {
+    "eyebrow": "Chapter Interest",
+    "heading": "Tell us where you want to build.",
+    "body": "Chapters can help students organize workshops, volunteer projects, education posts, and local conservation activities in their own school or community space."
+  },
+  "details": [
+    {
+      "kicker": "Who can start one",
+      "heading": "Students and youth leaders",
+      "body": "If you want to bring conservation education to your school, club, library, or neighborhood group, this is the place to start."
+    },
+    {
+      "kicker": "What we need",
+      "heading": "A short interest form",
+      "body": "The form asks for your contact information, community or school name, and what kind of chapter support you are looking for."
+    },
+    {
+      "kicker": "More information",
+      "heading": "Handbook coming soon",
+      "body": "A chapter handbook with more guidance will be added once it is ready."
+    }
+  ],
+  "formCta": {
+    "eyebrow": "Interest Form",
+    "heading": "Ready to start?",
+    "body": "Use the Google Form to tell us you are interested in starting a chapter. We will add handbook details here once they are available.",
+    "cta": {
+      "label": "Open chapter form",
+      "href": "https://docs.google.com/forms/d/1lmm6IU8bG7cGky52QzebUZUTAlytg5oHva9YsRrC2Y8/viewform"
+    }
+  }
+}

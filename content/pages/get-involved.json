@@ -24,9 +24,9 @@
     }
   ],
   "collaboration": {
-    "eyebrow": "Collaborate With Us",
+    "eyebrow": "Start a Chapter",
     "heading": "Bring youth conservation education to your community space.",
-    "body": "Bay Area Youth Conservation is open to local collaborations, workshop ideas, volunteer projects, and education partnerships across the San Leandro and San Lorenzo area.",
-    "cta": { "label": "Start a collaboration", "href": "/contact/" }
+    "body": "Bay Area Youth Conservation is open to students and youth leaders who want to build local chapters around workshops, volunteer projects, and conservation education.",
+    "cta": { "label": "Start a chapter", "href": "/start-a-chapter/" }
   }
 }

@@ -4,7 +4,7 @@ const hasTinaCloud =
   Boolean(process.env.NEXT_PUBLIC_TINA_CLIENT_ID) && Boolean(process.env.TINA_TOKEN);
 
 const tinaArgs = hasTinaCloud
-  ? ["tinacms", "build", "--content=local", "-c", "astro build"]
+  ? ["tinacms", "build", "--content=local", "--skip-cloud-checks", "-c", "astro build"]
   : ["tinacms", "build", "--local", "--skip-cloud-checks", "-c", "astro build"];
 
 const result = spawnSync("npx", tinaArgs, {
