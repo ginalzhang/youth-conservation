@@ -40,6 +40,7 @@ const footerLinks = navItems.filter((item) => !item.cta);
     <script is:inline>
       document.documentElement.classList.add("js");
     </script>
+    <link rel="stylesheet" href="/mobile-nav.css" />
   </head>
   <body data-contact-email={siteSettings.contactEmail}>
     <header class="site-header">
@@ -166,6 +167,7 @@ const footerLinks = navItems.filter((item) => !item.cta);
         setupContactForm();
       })();
     </script>
+    <script src="/mobile-nav.js" defer></script>
   </body>
 </html>
 

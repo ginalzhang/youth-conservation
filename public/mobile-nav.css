@@ -1,0 +1,129 @@
+/* ==========================================================================
+   BAYC — mobile navigation
+   Drop-in. Requires no markup changes: mobile-nav.js injects the button.
+   Load AFTER your existing styles so these rules win on equal specificity.
+   ========================================================================== */
+
+/* The injected button. Hidden on desktop. */
+.bayc-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.bayc-nav-toggle:focus-visible {
+  outline: 2px solid #2E4A24;
+  outline-offset: 2px;
+}
+.bayc-nav-toggle .bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #2E4A24;
+  transition: transform 200ms cubic-bezier(.25, .46, .45, .94),
+              opacity   200ms cubic-bezier(.25, .46, .45, .94);
+}
+.bayc-nav-toggle .bar + .bar { margin-top: 4px; }
+
+.bayc-nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.bayc-nav-toggle[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
+.bayc-nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* --------------------------------------------------------------------------
+   Collapse point. 980px because the nav now carries six items
+   (Home / What We Do / Our Team / Get Involved / Contact / Start a Chapter).
+   If you add a seventh, raise this number.
+   -------------------------------------------------------------------------- */
+@media (max-width: 980px) {
+
+  html.js .bayc-nav-toggle { display: flex; }
+
+  /* The header row: brand on the left, button on the right, one line only. */
+  html.js .site-header .bayc-nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+
+  /* Override the existing <=640px centered, full-width brand rule so the
+     handoff row can keep brand left and hamburger right on one line. */
+  html.js .site-header .bayc-nav-row .brand {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    min-width: 0;
+    width: auto;
+  }
+
+  html.js .site-header .bayc-nav-row .brand span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* The nav becomes a dropdown panel anchored under the header.
+     `.site-header` is sticky, which is a positioned element, so the panel
+     anchors to it correctly without any extra position declaration. */
+  html.js .site-header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 8px clamp(20px, 4vw, 56px) 20px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  html.js .site-header.bayc-nav-open nav { display: flex; }
+
+  /* Panel rows: full width, 48px minimum touch target, hairline separated. */
+  html.js .site-header nav > a,
+  html.js .site-header nav > button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 14px 0;
+    font-size: 17px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  /* The active page reads by weight, not by the desktop underline. */
+  html.js .site-header nav > a[aria-current="page"] {
+    border-bottom-color: rgba(0, 0, 0, 0.06);
+    font-weight: 600;
+    color: #2E4A24;
+  }
+
+  /* The "Start a Chapter" pill keeps its pill shape but goes full width
+     and drops to the bottom of the panel.
+     Adjust this selector to match your own CTA class if it differs. */
+  html.js .site-header nav > .btn,
+  html.js .site-header nav > .btn-nav,
+  html.js .site-header nav > .nav-cta {
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-bottom: none;
+  }
+}
