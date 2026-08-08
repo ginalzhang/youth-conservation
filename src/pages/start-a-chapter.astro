@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { startChapterPage } from "../lib/content";
+---
+
+<BaseLayout
+  title={startChapterPage.title}
+  description={startChapterPage.description}
+  currentPath="/start-a-chapter/"
+>
+  <main>
+    <section class="sec-sm page-header">
+      <div class="page-header-inner">
+        <div class="eyebrow">{startChapterPage.header.eyebrow}</div>
+        <h1 class="page">{startChapterPage.header.heading}</h1>
+        <p class="body">{startChapterPage.header.body}</p>
+      </div>
+    </section>
+
+    <section class="sec-sm">
+      <div class="wrap chapter-intro">
+        <div data-reveal>
+          <div class="eyebrow">{startChapterPage.intro.eyebrow}</div>
+          <h2 class="sect">{startChapterPage.intro.heading}</h2>
+          <p class="body">{startChapterPage.intro.body}</p>
+        </div>
+
+        <div class="grid grid-3 chapter-detail-grid" data-reveal>
+          {
+            startChapterPage.details.map((detail) => (
+              <article class="card">
+                <div class="kicker">{detail.kicker}</div>
+                <h3 class="card-title small">{detail.heading}</h3>
+                <p class="body-sm">{detail.body}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="band-green collaborate-band">
+      <div data-reveal>
+        <div class="green-eyebrow">{startChapterPage.formCta.eyebrow}</div>
+        <h2>{startChapterPage.formCta.heading}</h2>
+        <p>{startChapterPage.formCta.body}</p>
+        <a
+          class="btn btn-on-green"
+          href={startChapterPage.formCta.cta.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {startChapterPage.formCta.cta.label}
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .chapter-intro {
+    display: grid;
+    gap: clamp(28px, 5vw, 48px);
+  }
+
+  .chapter-intro > div:first-child {
+    max-width: 720px;
+  }
+
+  .chapter-detail-grid {
+    gap: 22px;
+  }
+</style>

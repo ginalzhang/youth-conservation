@@ -264,6 +264,29 @@ export default defineConfig({
         ]
       },
       {
+        name: "startChapterPage",
+        label: "Start a Chapter Page",
+        path: "content/pages",
+        format: "json",
+        match: { include: "start-a-chapter" },
+        ui: singleDocumentActions,
+        fields: [
+          ...pageShellFields,
+          { type: "object", name: "header", label: "Header", fields: headerFields },
+          { type: "object", name: "intro", label: "Intro", fields: headerFields },
+          { type: "object", name: "details", label: "Details", list: true, fields: cardFields },
+          {
+            type: "object",
+            name: "formCta",
+            label: "Form CTA",
+            fields: [
+              ...headerFields,
+              { type: "object", name: "cta", label: "CTA", fields: ctaFields }
+            ]
+          }
+        ]
+      },
+      {
         name: "contactPage",
         label: "Contact Page",
         path: "content/pages",

@@ -3,6 +3,7 @@ import homePageData from "../../content/pages/home.json";
 import workPageData from "../../content/pages/what-we-do.json";
 import teamPageData from "../../content/pages/team.json";
 import getInvolvedPageData from "../../content/pages/get-involved.json";
+import startChapterPageData from "../../content/pages/start-a-chapter.json";
 import contactPageData from "../../content/pages/contact.json";
 
 export type Link = {
@@ -25,6 +26,7 @@ export const homePage = homePageData;
 export const workPage = workPageData;
 export const teamPage = teamPageData;
 export const getInvolvedPage = getInvolvedPageData;
+export const startChapterPage = startChapterPageData;
 export const contactPage = contactPageData;
 
 const teamMemberModules = import.meta.glob("../../content/team-members/*.json", { eager: true });

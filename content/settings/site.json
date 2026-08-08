@@ -10,7 +10,8 @@
     { "label": "What We Do", "href": "/what-we-do/", "cta": false },
     { "label": "Our Team", "href": "/team/", "cta": false },
     { "label": "Get Involved", "href": "/get-involved/", "cta": false },
-    { "label": "Contact", "href": "/contact/", "cta": true }
+    { "label": "Contact", "href": "/contact/", "cta": false },
+    { "label": "Start a Chapter", "href": "/start-a-chapter/", "cta": true }
   ],
   "footer": {
     "body": "Youth-led climate education and conservation action in the Bay Area, with a focus on San Leandro and San Lorenzo.",
