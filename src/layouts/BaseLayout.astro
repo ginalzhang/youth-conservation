@@ -10,7 +10,7 @@ const {
 const siteName = siteSettings.siteName;
 const pageTitle = title === siteName ? siteName : `${title} | ${siteName}`;
 const navItems = siteSettings.navItems;
-const footerLinks = navItems.filter((item) => !item.cta);
+const footerLinks = navItems;
 ---
 
 <!doctype html>

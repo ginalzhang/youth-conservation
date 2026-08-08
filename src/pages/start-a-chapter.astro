@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { startChapterPage } from "../lib/content";
+
+const chapterFormUrl =
+  "https://docs.google.com/forms/d/1lmm6IU8bG7cGky52QzebUZUTAlytg5oHva9YsRrC2Y8/viewform";
 ---
 
 <BaseLayout
@@ -11,46 +14,128 @@ import { startChapterPage } from "../lib/content";
   <main>
     <section class="sec-sm page-header">
       <div class="page-header-inner">
-        <div class="eyebrow">{startChapterPage.header.eyebrow}</div>
-        <h1 class="page">{startChapterPage.header.heading}</h1>
-        <p class="body">{startChapterPage.header.body}</p>
+        <div class="eyebrow">Start a Chapter</div>
+        <h1 class="page">Bring youth conservation education to your community.</h1>
+        <p class="body">We are open to applicants around the nation and worldwide. Anyone can start a chapter.</p>
+        <a class="btn btn-primary chapter-hero-link" href={chapterFormUrl} target="_blank" rel="noopener noreferrer">
+          Open chapter form
+        </a>
       </div>
     </section>
 
     <section class="sec-sm">
-      <div class="wrap chapter-intro">
-        <div data-reveal>
-          <div class="eyebrow">{startChapterPage.intro.eyebrow}</div>
-          <h2 class="sect">{startChapterPage.intro.heading}</h2>
-          <p class="body">{startChapterPage.intro.body}</p>
+      <div class="wrap">
+        <div class="section-intro" data-reveal>
+          <div class="eyebrow">What a chapter does</div>
+          <h2 class="sect">Education for children, service for youth.</h2>
         </div>
-
-        <div class="grid grid-3 chapter-detail-grid" data-reveal>
-          {
-            startChapterPage.details.map((detail) => (
-              <article class="card">
-                <div class="kicker">{detail.kicker}</div>
-                <h3 class="card-title small">{detail.heading}</h3>
-                <p class="body-sm">{detail.body}</p>
-              </article>
-            ))
-          }
+        <div class="grid grid-3 chapter-grid" data-reveal>
+          <article class="card">
+            <div class="kicker">Workshops</div>
+            <h3 class="card-title small">Art and STEM activities</h3>
+            <p class="body-sm">
+              Chapters bring conservation education to children and spread awareness about environmental topics through fun art activities and STEM projects.
+            </p>
+          </article>
+          <article class="card">
+            <div class="kicker">Volunteering</div>
+            <h3 class="card-title small">Clean ups and restoration</h3>
+            <p class="body-sm">
+              Chapters run volunteer opportunities for youth, from community clean ups to invasive species removal.
+            </p>
+          </article>
+          <article class="card">
+            <div class="kicker">Your focus</div>
+            <h3 class="card-title small">An area you choose</h3>
+            <p class="body-sm">
+              Each chapter picks what it cares about — wildlife rehabilitation, ocean and river clean up, whatever matters locally — and reaches out to organizations nearby to collaborate.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="band-green collaborate-band">
+    <section class="sec-sm band-pale">
+      <div class="wrap">
+        <div class="section-intro" data-reveal>
+          <div class="eyebrow">Before you start</div>
+          <h2 class="sect">What it takes, and what we cover.</h2>
+        </div>
+        <div class="grid grid-3 chapter-grid" data-reveal>
+          <article class="card">
+            <div class="kicker">What you bring</div>
+            <ul class="body-sm chapter-list">
+              <li>A space to host in — a library, community center, or a teacher's classroom.</li>
+              <li>Funding. School-based chapters usually raise this through school events and fundraisers.</li>
+              <li>Local outreach. You contact organizations in your area to collaborate on events.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="kicker">What we provide</div>
+            <ul class="body-sm chapter-list">
+              <li>Grants for community-based chapters that need starting funds.</li>
+              <li>Clean-up materials for volunteer events, if no one else can supply them.</li>
+              <li>A chapter handbook, currently in progress.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="kicker">Requirements</div>
+            <ul class="body-sm chapter-list">
+              <li>Able to dedicate time to meet chapter goals and deadlines</li>
+              <li>Must be following @youth_conservation on Instagram</li>
+              <li>Must be active on Instagram</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-sm">
+      <div class="wrap">
+        <div class="section-intro" data-reveal>
+          <div class="eyebrow">How it works</div>
+          <h2 class="sect">Three steps from interest to first workshop.</h2>
+        </div>
+        <div class="chapter-steps" data-reveal>
+          <article class="chapter-step">
+            <div class="chapter-step-number">1</div>
+            <div>
+              <h3 class="card-title small">Submit the interest form</h3>
+              <p class="body-sm">
+                It asks for your name, age, grade, school, where you are, and the best way to reach you.
+              </p>
+            </div>
+          </article>
+          <article class="chapter-step">
+            <div class="chapter-step-number">2</div>
+            <div>
+              <h3 class="card-title small">We reach out in 3 to 5 business days</h3>
+              <p class="body-sm">
+                Our executive team follows up and lets you know whether you can schedule an interview with us.
+              </p>
+            </div>
+          </article>
+          <article class="chapter-step">
+            <div class="chapter-step-number">3</div>
+            <div>
+              <h3 class="card-title small">We plan your chapter together</h3>
+              <p class="body-sm">
+                We talk through what kind of chapter you want to start, your goals, and your plan to reach them. Mainly a chat to help you get started.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band-green chapter-cta">
       <div data-reveal>
-        <div class="green-eyebrow">{startChapterPage.formCta.eyebrow}</div>
-        <h2>{startChapterPage.formCta.heading}</h2>
-        <p>{startChapterPage.formCta.body}</p>
-        <a
-          class="btn btn-on-green"
-          href={startChapterPage.formCta.cta.href}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {startChapterPage.formCta.cta.label}
+        <h2>Start a Chapter</h2>
+        <p>
+          Fill out the chapter interest form and we will get back to you shortly. Full chapter resources and guide coming soon!
+        </p>
+        <a class="btn btn-on-green" href={chapterFormUrl} target="_blank" rel="noopener noreferrer">
+          Open chapter form
         </a>
       </div>
     </section>
@@ -58,16 +143,81 @@ import { startChapterPage } from "../lib/content";
 </BaseLayout>
 
 <style>
-  .chapter-intro {
-    display: grid;
-    gap: clamp(28px, 5vw, 48px);
+  .chapter-hero-link {
+    margin-top: 28px;
   }
 
-  .chapter-intro > div:first-child {
-    max-width: 720px;
-  }
-
-  .chapter-detail-grid {
+  .chapter-grid {
     gap: 22px;
+    margin-top: 40px;
+  }
+
+  .chapter-list {
+    padding-left: 18px;
+    line-height: 1.8;
+  }
+
+  .chapter-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 820px;
+    margin-top: 36px;
+  }
+
+  .chapter-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .chapter-step-number {
+    display: flex;
+    flex: 0 0 38px;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 9999px;
+    background: var(--green-deep);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .chapter-step .card-title {
+    margin: 0;
+  }
+
+  .chapter-cta {
+    padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
+    text-align: center;
+  }
+
+  .chapter-cta > div {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .chapter-cta h2 {
+    margin: 0;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.6vw, 44px);
+    font-weight: 700;
+    line-height: 1.14;
+  }
+
+  .chapter-cta p {
+    max-width: 600px;
+    margin: 20px auto 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16.5px;
+    line-height: 1.7;
+  }
+
+  .chapter-cta .btn {
+    margin-top: 30px;
   }
 </style>

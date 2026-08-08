@@ -19,15 +19,36 @@ import { getInvolvedPage } from "../lib/content";
 
     <section class="sec-sm">
       <div class="wrap grid grid-3 involvement-grid" data-reveal>
-        {
-          getInvolvedPage.cards.map((card) => (
-            <article class="card">
-              <div class="kicker">{card.kicker}</div>
-              <h2 class="card-title small">{card.heading}</h2>
-              <p class="body-sm">{card.body}</p>
-            </article>
-          ))
-        }
+        <article class="card">
+          <div class="kicker">Step one</div>
+          <h2 class="card-title small">Turn notifications on</h2>
+          <p class="body-sm">
+            Turn notifications on for our page to get instant updates on volunteering and workshop events. Make sure to <strong>show up</strong> whenever you can (most important part) to volunteering events, meetings, etc.
+          </p>
+          <a class="involvement-link" href="https://www.instagram.com/youth_conservation/" target="_blank" rel="noopener noreferrer">
+            Follow @youth_conservation
+          </a>
+        </article>
+        <article class="card">
+          <div class="kicker">Step two</div>
+          <h2 class="card-title small">Start a chapter or club</h2>
+          <p class="body-sm">
+            Develops leadership skills while creating impact within your community. We are open to applicants around the nation and worldwide.
+          </p>
+          <a class="involvement-link" href="/start-a-chapter/">
+            Start a chapter
+          </a>
+        </article>
+        <article class="card">
+          <div class="kicker">Step three</div>
+          <h2 class="card-title small">DM us for collaborations</h2>
+          <p class="body-sm">
+            Message us about collaborations and upcoming clean ups. We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people.
+          </p>
+          <a class="involvement-link" href="https://www.instagram.com/youth_conservation/" target="_blank" rel="noopener noreferrer">
+            Send us a DM
+          </a>
+        </article>
       </div>
     </section>
 
@@ -43,3 +64,14 @@ import { getInvolvedPage } from "../lib/content";
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .involvement-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+</style>

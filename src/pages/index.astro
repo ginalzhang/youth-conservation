@@ -50,6 +50,12 @@ import { homePage, toPublicPath } from "../lib/content";
           <div class="eyebrow">{homePage.whoWeAre.eyebrow}</div>
           <h2 class="sect">{homePage.whoWeAre.heading}</h2>
           <p class="body">{homePage.whoWeAre.body}</p>
+          <div class="placeholder-note mission-goal">
+            <div class="kicker">Our goal</div>
+            <p class="body">
+              Our ultimate goal is to show the youth that change is possible. We encourage and support any kinds of interest in environmental justice. Through small actions and steps, we can have a cleaner neighborhood and a more sustainable and ecologically educated community.
+            </p>
+          </div>
           <a class="link-btn" href={homePage.whoWeAre.linkHref}>{homePage.whoWeAre.linkLabel}</a>
         </div>
         <div class="frame" data-reveal>
@@ -194,6 +200,16 @@ import { homePage, toPublicPath } from "../lib/content";
     font-weight: 600;
     letter-spacing: 0.09em;
     text-transform: uppercase;
+  }
+
+  .mission-goal {
+    margin-top: 26px;
+  }
+
+  .mission-goal .body {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   @media (max-width: 600px) {

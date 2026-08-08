@@ -3,7 +3,7 @@
   "description": "Attend a workshop, volunteer, or collaborate with Bay Area Youth Conservation.",
   "header": {
     "eyebrow": "Get Involved",
-    "heading": "Three ways to join in.",
+    "heading": "Want to help out?",
     "body": "You do not need experience or a long-term commitment. Pick whichever fits, and reach out."
   },
   "cards": [
@@ -24,9 +24,9 @@
     }
   ],
   "collaboration": {
-    "eyebrow": "Start a Chapter",
+    "eyebrow": "Collaborate With Us",
     "heading": "Bring youth conservation education to your community space.",
-    "body": "Bay Area Youth Conservation is open to students and youth leaders who want to build local chapters around workshops, volunteer projects, and conservation education.",
-    "cta": { "label": "Start a chapter", "href": "/start-a-chapter/" }
+    "body": "Bay Area Youth Conservation is open to local collaborations, workshop ideas, volunteer projects, and education partnerships across the San Leandro and San Lorenzo area.",
+    "cta": { "label": "Start a collaboration", "href": "/contact/" }
   }
 }
