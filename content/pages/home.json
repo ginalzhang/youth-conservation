@@ -3,17 +3,32 @@
   "description": "Youth-led climate education, workshops, and volunteer opportunities in San Leandro, San Lorenzo, and the East Bay.",
   "hero": {
     "eyebrow": "Youth-led conservation in the Bay Area",
-    "heading": "Helping local students turn climate care into community action.",
+    "heading": "Helping local students turn climate care into community action",
     "body": "Bay Area Youth Conservation brings young people together through climate education, hands-on volunteer opportunities, and community workshops in the San Leandro and San Lorenzo area.",
-    "primaryCta": { "label": "Get involved", "href": "/get-involved/" },
-    "secondaryCta": { "label": "Ask us a question", "href": "/contact/" }
+    "primaryCta": {
+      "label": "Get involved",
+      "href": "/get-involved/"
+    },
+    "secondaryCta": {
+      "label": "Ask us a question",
+      "href": "/contact/"
+    }
   },
   "highlights": {
     "heading": "Rooted in local youth action.",
     "items": [
-      { "value": "Youth-led", "label": "Built by students for students, families, and local neighbors." },
-      { "value": "2 months", "label": "Workshop rhythm at San Leandro Library." },
-      { "value": "East Bay", "label": "Focused on San Leandro, San Lorenzo, and nearby communities." }
+      {
+        "value": "Youth-led",
+        "label": "Built by students for students, families, and local neighbors."
+      },
+      {
+        "value": "2 months",
+        "label": "Workshop rhythm at San Leandro Library."
+      },
+      {
+        "value": "East Bay",
+        "label": "Focused on San Leandro, San Lorenzo, and nearby communities."
+      }
     ]
   },
   "whoWeAre": {
@@ -60,6 +75,9 @@
     "eyebrow": "Have a question",
     "heading": "Not sure where you fit in? Just ask.",
     "body": "Whether you want to attend a workshop, volunteer, or bring BAYC to your school or community space, send us a note and we will get back to you.",
-    "cta": { "label": "Go to contact form", "href": "/contact/" }
+    "cta": {
+      "label": "Go to contact form",
+      "href": "/contact/"
+    }
   }
 }
