@@ -20,6 +20,10 @@
     "eyebrow": "Our mission",
     "heading": "A teen-founded environmental organization.",
     "body": "We are a teen-founded environmental organization passionate about one goal: making the environment more sustainable. We aim to spread awareness about climate issues through community education and inspire youth to get involved by making it easy and accessible through volunteering opportunities.",
+    "goal": {
+      "kicker": "Our goal",
+      "body": "Our ultimate goal is to show the youth that change is possible. We encourage and support any kinds of interest in environmental justice. Through small actions and steps, we can have a cleaner neighborhood and a more sustainable and ecologically educated community."
+    },
     "linkLabel": "See what we do",
     "linkHref": "/what-we-do/",
     "photo": "",

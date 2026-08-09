@@ -51,10 +51,8 @@ import { homePage, toPublicPath } from "../lib/content";
           <h2 class="sect">{homePage.whoWeAre.heading}</h2>
           <p class="body">{homePage.whoWeAre.body}</p>
           <div class="placeholder-note mission-goal">
-            <div class="kicker">Our goal</div>
-            <p class="body">
-              Our ultimate goal is to show the youth that change is possible. We encourage and support any kinds of interest in environmental justice. Through small actions and steps, we can have a cleaner neighborhood and a more sustainable and ecologically educated community.
-            </p>
+            <div class="kicker">{homePage.whoWeAre.goal.kicker}</div>
+            <p class="body">{homePage.whoWeAre.goal.body}</p>
           </div>
           <a class="link-btn" href={homePage.whoWeAre.linkHref}>{homePage.whoWeAre.linkLabel}</a>
         </div>

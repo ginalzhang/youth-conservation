@@ -144,6 +144,15 @@ export default defineConfig({
             label: "Who We Are",
             fields: [
               ...headerFields,
+              {
+                type: "object",
+                name: "goal",
+                label: "Goal Callout",
+                fields: [
+                  { type: "string", name: "kicker", label: "Kicker", required: true },
+                  { type: "string", name: "body", label: "Body", ui: { component: "textarea" }, required: true }
+                ]
+              },
               { type: "string", name: "linkLabel", label: "Link label", required: true },
               { type: "string", name: "linkHref", label: "Link URL", required: true },
               { type: "image", name: "photo", label: "Photo" },
