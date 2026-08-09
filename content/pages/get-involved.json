@@ -10,7 +10,7 @@
     {
       "kicker": "San Leandro Library",
       "heading": "Attend a workshop",
-      "body": "Join the every-two-month workshop series at San Leandro Library for climate learning, hands-on projects, and conversation."
+      "body": "Join the workshop series at San Leandro Library for climate education"
     },
     {
       "kicker": "Youth service",
@@ -27,6 +27,9 @@
     "eyebrow": "Collaborate With Us",
     "heading": "Bring youth conservation education to your community space.",
     "body": "Bay Area Youth Conservation is open to local collaborations, workshop ideas, volunteer projects, and education partnerships across the San Leandro and San Lorenzo area.",
-    "cta": { "label": "Start a collaboration", "href": "/contact/" }
+    "cta": {
+      "label": "Start a collaboration",
+      "href": "/contact/"
+    }
   }
 }
