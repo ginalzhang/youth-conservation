@@ -1,0 +1,45 @@
+{
+  "title": "The Problem",
+  "description": "Climate issues and climate literacy resources from Bay Area Youth Conservation.",
+  "header": {
+    "eyebrow": "The Problem",
+    "heading": "The problem.",
+    "body": "This page will share the information, data, and infographics behind why BAYC exists."
+  },
+  "sections": [
+    {
+      "eyebrow": "Climate issues",
+      "heading": "Climate issues affect our communities.",
+      "body": "Add climate issue information, data, and context here.",
+      "image": "",
+      "imageAlt": "",
+      "imagePlaceholder": "Upload an infographic, chart, or climate issue image",
+      "sourceLabel": "",
+      "sourceHref": ""
+    },
+    {
+      "eyebrow": "Climate literacy",
+      "heading": "Climate literacy helps people understand what is at stake.",
+      "body": "Add climate literacy information, data, and context here.",
+      "image": "",
+      "imageAlt": "",
+      "imagePlaceholder": "Upload an infographic, chart, or climate literacy image",
+      "sourceLabel": "",
+      "sourceHref": ""
+    },
+    {
+      "eyebrow": "Why BAYC exists",
+      "heading": "Youth need accessible ways to learn and take action.",
+      "body": "Add the reason BAYC created this mission here.",
+      "image": "",
+      "imageAlt": "",
+      "imagePlaceholder": "Upload an infographic, chart, or mission image",
+      "sourceLabel": "",
+      "sourceHref": ""
+    }
+  ],
+  "learnMore": {
+    "heading": "Learn more:",
+    "links": []
+  }
+}

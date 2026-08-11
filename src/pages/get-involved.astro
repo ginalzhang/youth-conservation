@@ -19,36 +19,25 @@ import { getInvolvedPage } from "../lib/content";
 
     <section class="sec-sm">
       <div class="wrap grid grid-3 involvement-grid" data-reveal>
-        <article class="card">
-          <div class="kicker">Step one</div>
-          <h2 class="card-title small">Turn notifications on</h2>
-          <p class="body-sm">
-            Turn notifications on for our page to get instant updates on volunteering and workshop events. Make sure to <strong>show up</strong> whenever you can (most important part) to volunteering events, meetings, etc.
-          </p>
-          <a class="involvement-link" href="https://www.instagram.com/youth_conservation/" target="_blank" rel="noopener noreferrer">
-            Follow @youth_conservation
-          </a>
-        </article>
-        <article class="card">
-          <div class="kicker">Step two</div>
-          <h2 class="card-title small">Upcoming events and workshops</h2>
-          <p class="body-sm">
-            Every workshop, volunteer day, and clean up goes on our public calendar as soon as it is scheduled. Check what is coming up and see whether you can make it.
-          </p>
-          <a class="involvement-link" href="#calendar">
-            See the calendar
-          </a>
-        </article>
-        <article class="card">
-          <div class="kicker">Step three</div>
-          <h2 class="card-title small">Start a chapter or club</h2>
-          <p class="body-sm">
-            Develops leadership skills while creating impact within your community. We are open to applicants around the nation and worldwide.
-          </p>
-          <a class="involvement-link" href="/start-a-chapter/">
-            Start a chapter
-          </a>
-        </article>
+        {
+          getInvolvedPage.cards.map((card) => (
+            <article class="card">
+              <div class="kicker">{card.kicker}</div>
+              <h2 class="card-title small">{card.heading}</h2>
+              <p class="body-sm">{card.body}</p>
+              {card.linkHref && card.linkLabel ? (
+                <a
+                  class="involvement-link"
+                  href={card.linkHref}
+                  target={card.newTab ? "_blank" : undefined}
+                  rel={card.newTab ? "noopener noreferrer" : undefined}
+                >
+                  {card.linkLabel}
+                </a>
+              ) : null}
+            </article>
+          ))
+        }
       </div>
     </section>
 
@@ -70,7 +59,7 @@ import { getInvolvedPage } from "../lib/content";
           ></iframe>
         </div>
         <p class="body-sm" style="margin:16px 0 0">
-          Times are Pacific.
+          Times are Pacific.{" "}
           <a
             href="https://calendar.google.com/calendar/embed?src=M2I0YTRjY2FkNjkyNzQzNTUxNzA1NzdjZGEzMTBhMmFmYThiZTA0MWI3NmViMWU4ZjQxYTY2N2E0NjA3MzM3NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&ctz=America%2FLos_Angeles"
             target="_blank"
@@ -78,7 +67,7 @@ import { getInvolvedPage } from "../lib/content";
             style="font-weight:600"
           >
             Open in Google Calendar
-          </a>
+          </a>{" "}
           to add it to your own.
         </p>
       </div>

@@ -5,12 +5,5 @@
     "eyebrow": "Our Team",
     "heading": "The students behind BAYC.",
     "body": "BAYC is run by local students who plan the workshops, write the education posts, and coordinate with libraries, schools, and community groups."
-  },
-  "placeholder": {
-    "photoLabel": "Photo",
-    "roleLabel": "Role",
-    "nameLabel": "Name",
-    "count": 4,
-    "note": "Placeholder cards. Replace each with a real name, role, and headshot, then delete this note."
   }
 }

@@ -1,6 +1,7 @@
 import siteSettingsData from "../../content/settings/site.json";
 import homePageData from "../../content/pages/home.json";
 import workPageData from "../../content/pages/what-we-do.json";
+import problemPageData from "../../content/pages/the-problem.json";
 import teamPageData from "../../content/pages/team.json";
 import getInvolvedPageData from "../../content/pages/get-involved.json";
 import startChapterPageData from "../../content/pages/start-a-chapter.json";
@@ -24,6 +25,7 @@ export type TeamMember = {
 export const siteSettings = siteSettingsData;
 export const homePage = homePageData;
 export const workPage = workPageData;
+export const problemPage = problemPageData;
 export const teamPage = teamPageData;
 export const getInvolvedPage = getInvolvedPageData;
 export const startChapterPage = startChapterPageData;

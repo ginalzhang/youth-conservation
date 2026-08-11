@@ -24,6 +24,24 @@ const cardFields: TinaField[] = [
   { type: "string", name: "body", label: "Body", ui: { component: "textarea" }, required: true }
 ];
 
+const involvementCardFields: TinaField[] = [
+  ...cardFields,
+  { type: "string", name: "linkLabel", label: "Link label" },
+  { type: "string", name: "linkHref", label: "Link URL" },
+  { type: "boolean", name: "newTab", label: "Open link in new tab" }
+];
+
+const problemSectionFields: TinaField[] = [
+  { type: "string", name: "eyebrow", label: "Eyebrow", required: true },
+  { type: "string", name: "heading", label: "Heading", required: true },
+  { type: "string", name: "body", label: "Body", ui: { component: "textarea" }, required: true },
+  { type: "image", name: "image", label: "Image or infographic" },
+  { type: "string", name: "imageAlt", label: "Image alt text" },
+  { type: "string", name: "imagePlaceholder", label: "Image placeholder", required: true },
+  { type: "string", name: "sourceLabel", label: "Source label" },
+  { type: "string", name: "sourceHref", label: "Source URL" }
+];
+
 const pageShellFields: TinaField[] = [
   { type: "string", name: "title", label: "SEO title", required: true },
   { type: "string", name: "description", label: "SEO description", ui: { component: "textarea" }, required: true }
@@ -144,15 +162,6 @@ export default defineConfig({
             label: "Who We Are",
             fields: [
               ...headerFields,
-              {
-                type: "object",
-                name: "goal",
-                label: "Goal Callout",
-                fields: [
-                  { type: "string", name: "kicker", label: "Kicker", required: true },
-                  { type: "string", name: "body", label: "Body", ui: { component: "textarea" }, required: true }
-                ]
-              },
               { type: "string", name: "linkLabel", label: "Link label", required: true },
               { type: "string", name: "linkHref", label: "Link URL", required: true },
               { type: "image", name: "photo", label: "Photo" },
@@ -207,6 +216,28 @@ export default defineConfig({
         ]
       },
       {
+        name: "problemPage",
+        label: "The Problem Page",
+        path: "content/pages",
+        format: "json",
+        match: { include: "the-problem" },
+        ui: singleDocumentActions,
+        fields: [
+          ...pageShellFields,
+          { type: "object", name: "header", label: "Header", fields: headerFields },
+          { type: "object", name: "sections", label: "Problem sections", list: true, fields: problemSectionFields },
+          {
+            type: "object",
+            name: "learnMore",
+            label: "Learn More",
+            fields: [
+              { type: "string", name: "heading", label: "Heading", required: true },
+              { type: "object", name: "links", label: "Links", list: true, fields: ctaFields }
+            ]
+          }
+        ]
+      },
+      {
         name: "teamPage",
         label: "Team Page",
         path: "content/pages",
@@ -215,19 +246,7 @@ export default defineConfig({
         ui: singleDocumentActions,
         fields: [
           ...pageShellFields,
-          { type: "object", name: "header", label: "Header", fields: headerFields },
-          {
-            type: "object",
-            name: "placeholder",
-            label: "Empty team placeholder",
-            fields: [
-              { type: "string", name: "photoLabel", label: "Photo label", required: true },
-              { type: "string", name: "roleLabel", label: "Role label", required: true },
-              { type: "string", name: "nameLabel", label: "Name label", required: true },
-              { type: "number", name: "count", label: "Placeholder count", required: true },
-              { type: "string", name: "note", label: "Note", ui: { component: "textarea" }, required: true }
-            ]
-          }
+          { type: "object", name: "header", label: "Header", fields: headerFields }
         ]
       },
       {
@@ -260,7 +279,7 @@ export default defineConfig({
         fields: [
           ...pageShellFields,
           { type: "object", name: "header", label: "Header", fields: headerFields },
-          { type: "object", name: "cards", label: "Cards", list: true, fields: cardFields },
+          { type: "object", name: "cards", label: "Cards", list: true, fields: involvementCardFields },
           {
             type: "object",
             name: "collaboration",

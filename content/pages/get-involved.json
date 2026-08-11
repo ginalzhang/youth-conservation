@@ -10,17 +10,26 @@
     {
       "kicker": "San Leandro Library",
       "heading": "Attend a workshop",
-      "body": "Join the workshop series at San Leandro Library for climate education"
+      "body": "Join the workshop series at San Leandro Library for climate education",
+      "linkLabel": "See the calendar",
+      "linkHref": "#calendar",
+      "newTab": false
     },
     {
       "kicker": "Youth service",
       "heading": "Volunteer with us",
-      "body": "Participate in local environmental remediation with us"
+      "body": "Participate in local environmental remediation with us",
+      "linkLabel": "Follow @youth_conservation",
+      "linkHref": "https://www.instagram.com/youth_conservation/",
+      "newTab": true
     },
     {
       "kicker": "Schools, clubs, libraries",
       "heading": "Collaborate",
-      "body": "We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people."
+      "body": "We work with schools, clubs, libraries, and local groups to bring youth conservation projects and education to more people.",
+      "linkLabel": "Start a collaboration",
+      "linkHref": "/contact/",
+      "newTab": false
     }
   ],
   "collaboration": {

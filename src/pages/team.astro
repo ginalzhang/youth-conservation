@@ -3,7 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getVisibleTeamMembers, teamPage, toPublicPath } from "../lib/content";
 
 const members = getVisibleTeamMembers();
-const placeholders = Array.from({ length: teamPage.placeholder.count });
 ---
 
 <BaseLayout title={teamPage.title} description={teamPage.description} currentPath="/team/">
@@ -30,23 +29,17 @@ const placeholders = Array.from({ length: teamPage.placeholder.count });
                       loading="lazy"
                     />
                   ) : (
-                    <div class="photo-placeholder">{teamPage.placeholder.photoLabel}</div>
+                    <div class="photo-placeholder">Photo</div>
                   )}
                   <div class="kicker">{member.role}</div>
                   <h2>{member.name}</h2>
                   {member.bio ? <p class="body-sm">{member.bio}</p> : null}
                 </article>
               ))
-            : placeholders.map(() => (
-                <article class="team-card">
-                  <div class="photo-placeholder">{teamPage.placeholder.photoLabel}</div>
-                  <div class="kicker">{teamPage.placeholder.roleLabel}</div>
-                  <h2>{teamPage.placeholder.nameLabel}</h2>
-                </article>
-              ))
+            : null
         }
       </div>
-      {members.length === 0 ? <div class="wrap placeholder-note">{teamPage.placeholder.note}</div> : null}
+      {members.length === 0 ? <div class="wrap placeholder-note">Add team members in TinaCMS to show them here.</div> : null}
     </section>
   </main>
 </BaseLayout>

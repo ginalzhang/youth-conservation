@@ -8,6 +8,7 @@
   "navItems": [
     { "label": "Home", "href": "/", "cta": false },
     { "label": "What We Do", "href": "/what-we-do/", "cta": false },
+    { "label": "The Problem", "href": "/the-problem/", "cta": false },
     { "label": "Our Team", "href": "/team/", "cta": false },
     { "label": "Get Involved", "href": "/get-involved/", "cta": false },
     { "label": "Contact", "href": "/contact/", "cta": false },
