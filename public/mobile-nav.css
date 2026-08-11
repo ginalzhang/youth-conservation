@@ -39,11 +39,9 @@
 .bayc-nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* --------------------------------------------------------------------------
-   Collapse point. 980px because the nav now carries six items
-   (Home / What We Do / Our Team / Get Involved / Contact / Start a Chapter).
-   If you add a seventh, raise this number.
+   Collapse point. 1080px because the nav now carries seven items.
    -------------------------------------------------------------------------- */
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
 
   html.js .bayc-nav-toggle { display: flex; }
 

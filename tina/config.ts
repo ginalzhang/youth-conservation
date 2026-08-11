@@ -31,15 +31,13 @@ const involvementCardFields: TinaField[] = [
   { type: "boolean", name: "newTab", label: "Open link in new tab" }
 ];
 
-const problemSectionFields: TinaField[] = [
+const problemBlockFields: TinaField[] = [
   { type: "string", name: "eyebrow", label: "Eyebrow", required: true },
   { type: "string", name: "heading", label: "Heading", required: true },
-  { type: "string", name: "body", label: "Body", ui: { component: "textarea" }, required: true },
-  { type: "image", name: "image", label: "Image or infographic" },
-  { type: "string", name: "imageAlt", label: "Image alt text" },
-  { type: "string", name: "imagePlaceholder", label: "Image placeholder", required: true },
-  { type: "string", name: "sourceLabel", label: "Source label" },
-  { type: "string", name: "sourceHref", label: "Source URL" }
+  { type: "string", name: "body", label: "Body slot", ui: { component: "textarea" }, required: true },
+  { type: "string", name: "sourceLabel", label: "Source label", required: true },
+  { type: "string", name: "sourceHref", label: "Source URL", required: true },
+  { type: "string", name: "imagePlaceholder", label: "Image placeholder", required: true }
 ];
 
 const pageShellFields: TinaField[] = [
@@ -224,8 +222,46 @@ export default defineConfig({
         ui: singleDocumentActions,
         fields: [
           ...pageShellFields,
-          { type: "object", name: "header", label: "Header", fields: headerFields },
-          { type: "object", name: "sections", label: "Problem sections", list: true, fields: problemSectionFields },
+          {
+            type: "object",
+            name: "header",
+            label: "Header",
+            fields: [
+              { type: "string", name: "eyebrow", label: "Eyebrow", required: true },
+              { type: "string", name: "heading", label: "Heading", required: true }
+            ]
+          },
+          {
+            type: "object",
+            name: "thesis",
+            label: "Thesis",
+            fields: [
+              { type: "string", name: "heading", label: "Headline statement", required: true },
+              { type: "string", name: "lede", label: "Lede slot", ui: { component: "textarea" }, required: true },
+              { type: "string", name: "body", label: "Body slot", ui: { component: "textarea" }, required: true }
+            ]
+          },
+          { type: "object", name: "blockOne", label: "Block 1 - Climate issues", fields: problemBlockFields },
+          {
+            type: "object",
+            name: "blockTwo",
+            label: "Block 2 - Local impact",
+            fields: [
+              ...problemBlockFields,
+              { type: "string", name: "findings", label: "Findings", list: true, required: true }
+            ]
+          },
+          { type: "object", name: "blockThree", label: "Block 3 - Climate literacy", fields: problemBlockFields },
+          {
+            type: "object",
+            name: "blockFour",
+            label: "Block 4 - Mission",
+            fields: [
+              { type: "string", name: "eyebrow", label: "Eyebrow", required: true },
+              { type: "string", name: "heading", label: "Heading", required: true },
+              { type: "string", name: "paragraphs", label: "Paragraph slots", list: true, ui: { component: "textarea" }, required: true }
+            ]
+          },
           {
             type: "object",
             name: "learnMore",
@@ -233,6 +269,16 @@ export default defineConfig({
             fields: [
               { type: "string", name: "heading", label: "Heading", required: true },
               { type: "object", name: "links", label: "Links", list: true, fields: ctaFields }
+            ]
+          },
+          {
+            type: "object",
+            name: "cta",
+            label: "CTA",
+            fields: [
+              { type: "string", name: "heading", label: "Heading", required: true },
+              { type: "string", name: "label", label: "Button label", required: true },
+              { type: "string", name: "href", label: "Button link", required: true }
             ]
           }
         ]

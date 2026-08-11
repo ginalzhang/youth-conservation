@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  var BREAKPOINT = 980; // keep in sync with mobile-nav.css
+  var BREAKPOINT = 1080; // keep in sync with mobile-nav.css
 
   function init() {
     var header = document.querySelector('.site-header') || document.querySelector('header');

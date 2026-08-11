@@ -3,43 +3,61 @@
   "description": "Climate issues and climate literacy resources from Bay Area Youth Conservation.",
   "header": {
     "eyebrow": "The Problem",
-    "heading": "The problem.",
-    "body": "This page will share the information, data, and infographics behind why BAYC exists."
+    "heading": "The problem we face."
   },
-  "sections": [
-    {
-      "eyebrow": "Climate issues",
-      "heading": "Climate issues affect our communities.",
-      "body": "Add climate issue information, data, and context here.",
-      "image": "",
-      "imageAlt": "",
-      "imagePlaceholder": "Upload an infographic, chart, or climate issue image",
-      "sourceLabel": "",
-      "sourceHref": ""
-    },
-    {
-      "eyebrow": "Climate literacy",
-      "heading": "Climate literacy helps people understand what is at stake.",
-      "body": "Add climate literacy information, data, and context here.",
-      "image": "",
-      "imageAlt": "",
-      "imagePlaceholder": "Upload an infographic, chart, or climate literacy image",
-      "sourceLabel": "",
-      "sourceHref": ""
-    },
-    {
-      "eyebrow": "Why BAYC exists",
-      "heading": "Youth need accessible ways to learn and take action.",
-      "body": "Add the reason BAYC created this mission here.",
-      "image": "",
-      "imageAlt": "",
-      "imagePlaceholder": "Upload an infographic, chart, or mission image",
-      "sourceLabel": "",
-      "sourceHref": ""
-    }
-  ],
+  "thesis": {
+    "heading": "Your headline statement goes here",
+    "lede": "LEDE — two or three sentences in slightly larger type, setting up the whole page. On the reference site this is the paragraph about how everyday life depends on burning fossil fuels.",
+    "body": "BODY — the fuller explanation that follows the lede. One paragraph, no image."
+  },
+  "blockOne": {
+    "eyebrow": "Climate issues",
+    "heading": "Subheading for your first data point",
+    "body": "BODY — explain the chart beside this. What it measures, over what period, and the one thing you want a reader to take away.",
+    "sourceLabel": "name the source and link it",
+    "sourceHref": "#",
+    "imagePlaceholder": "CHART OR INFOGRAPHIC — your climate issues data"
+  },
+  "blockTwo": {
+    "eyebrow": "Local impact",
+    "heading": "Subheading for your local findings",
+    "body": "BODY — one short paragraph of setup, then the bullets below.",
+    "findings": [
+      "First finding. One sentence, one fact.",
+      "Second finding.",
+      "Third finding."
+    ],
+    "sourceLabel": "name the source and link it",
+    "sourceHref": "#",
+    "imagePlaceholder": "MAP OR IMAGE — local hazard or impact visual"
+  },
+  "blockThree": {
+    "eyebrow": "The climate literacy crisis",
+    "heading": "Subheading for the literacy gap",
+    "body": "BODY — what the literacy gap is, who it affects, and the data behind it.",
+    "sourceLabel": "name the source and link it",
+    "sourceHref": "#",
+    "imagePlaceholder": "CHART OR INFOGRAPHIC — climate literacy data"
+  },
+  "blockFour": {
+    "eyebrow": "Why we created this mission",
+    "heading": "Subheading for why BAYC exists",
+    "paragraphs": [
+      "BODY — connect everything above to why BAYC was founded. Two paragraphs is plenty.",
+      "Second paragraph."
+    ]
+  },
   "learnMore": {
     "heading": "Learn more:",
-    "links": []
+    "links": [
+      { "label": "First resource link", "href": "#" },
+      { "label": "Second resource link", "href": "#" },
+      { "label": "Third resource link", "href": "#" }
+    ]
+  },
+  "cta": {
+    "heading": "Want to help?",
+    "label": "Get involved",
+    "href": "/get-involved/"
   }
 }
