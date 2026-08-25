@@ -39,9 +39,9 @@
 .bayc-nav-toggle[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* --------------------------------------------------------------------------
-   Collapse point. 1080px because the nav now carries seven items.
+   Collapse point. 1200px because the nav now carries eight items.
    -------------------------------------------------------------------------- */
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
 
   html.js .bayc-nav-toggle { display: flex; }
 

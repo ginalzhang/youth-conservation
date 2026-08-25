@@ -1,0 +1,124 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { donatePage } from "../lib/content";
+---
+
+<BaseLayout
+  title={donatePage.title}
+  description={donatePage.description}
+  currentPath="/donate/"
+>
+  <main>
+    <section class="sec-sm page-header">
+      <div class="page-header-inner">
+        <div class="eyebrow">{donatePage.header.eyebrow}</div>
+        <h1 class="page">{donatePage.header.heading}</h1>
+        <p class="body">{donatePage.header.body}</p>
+      </div>
+    </section>
+
+    <section class="sec-sm">
+      <div class="wrap donation-layout">
+        <div class="card-lg donation-card" data-reveal>
+          <div class="kicker">{donatePage.donation.kicker}</div>
+          <h2 class="sect">{donatePage.donation.heading}</h2>
+          <p class="body">{donatePage.donation.body}</p>
+          <a
+            class="btn btn-primary"
+            href={donatePage.donation.cta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {donatePage.donation.cta.label}
+          </a>
+        </div>
+
+        <div class="grid donation-detail-grid" data-reveal>
+          {
+            donatePage.details.map((detail) => (
+              <article class="card">
+                <div class="kicker">{detail.kicker}</div>
+                <h3 class="card-heading">{detail.heading}</h3>
+                <p class="body-sm">{detail.body}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="band-green donate-closing">
+      <div data-reveal>
+        <div class="green-eyebrow">{donatePage.closing.eyebrow}</div>
+        <h2>{donatePage.closing.heading}</h2>
+        <p>{donatePage.closing.body}</p>
+        <a class="btn btn-on-green" href={donatePage.closing.cta.href}>
+          {donatePage.closing.cta.label}
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .donation-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+  }
+
+  .donation-card {
+    background: var(--lime-pale);
+  }
+
+  .donation-card .body {
+    margin-top: 18px;
+  }
+
+  .donation-card .btn {
+    margin-top: 26px;
+  }
+
+  .donation-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donate-closing {
+    padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px);
+    text-align: center;
+  }
+
+  .donate-closing > div {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .donate-closing h2 {
+    margin: 14px 0 0;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3.4vw, 42px);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.14;
+  }
+
+  .donate-closing p {
+    max-width: 620px;
+    margin: 20px auto 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 16.5px;
+    line-height: 1.7;
+  }
+
+  .donate-closing .btn {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 820px) {
+    .donation-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

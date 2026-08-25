@@ -361,6 +361,39 @@ export default defineConfig({
         ]
       },
       {
+        name: "donatePage",
+        label: "Donate Page",
+        path: "content/pages",
+        format: "json",
+        match: { include: "donate" },
+        ui: singleDocumentActions,
+        fields: [
+          ...pageShellFields,
+          { type: "object", name: "header", label: "Header", fields: headerFields },
+          {
+            type: "object",
+            name: "donation",
+            label: "Donation Card",
+            fields: [
+              { type: "string", name: "kicker", label: "Kicker", required: true },
+              { type: "string", name: "heading", label: "Heading", required: true },
+              { type: "string", name: "body", label: "Body", ui: { component: "textarea" }, required: true },
+              { type: "object", name: "cta", label: "CTA", fields: ctaFields }
+            ]
+          },
+          { type: "object", name: "details", label: "Details", list: true, fields: cardFields },
+          {
+            type: "object",
+            name: "closing",
+            label: "Closing CTA",
+            fields: [
+              ...headerFields,
+              { type: "object", name: "cta", label: "CTA", fields: ctaFields }
+            ]
+          }
+        ]
+      },
+      {
         name: "contactPage",
         label: "Contact Page",
         path: "content/pages",

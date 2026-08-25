@@ -1,0 +1,44 @@
+{
+  "title": "Donate",
+  "description": "Donate to support Bay Area Youth Conservation workshops, clean ups, and youth climate education.",
+  "header": {
+    "eyebrow": "Donate",
+    "heading": "Support youth-led climate action.",
+    "body": "Your donation helps Bay Area Youth Conservation run workshops, organize local clean ups, and make climate education more accessible to young people."
+  },
+  "donation": {
+    "kicker": "Fiscal sponsor",
+    "heading": "Donate through Hack Club Bank.",
+    "body": "Bay Area Youth Conservation accepts donations through our Hack Club Bank page.",
+    "cta": {
+      "label": "Donate on Hack Club Bank",
+      "href": "https://hcb.hackclub.com/bay-area-youth-conservation"
+    }
+  },
+  "details": [
+    {
+      "kicker": "Workshops",
+      "heading": "Help cover community education.",
+      "body": "Donations can support workshop supplies, printed materials, and youth-friendly climate education resources."
+    },
+    {
+      "kicker": "Clean ups",
+      "heading": "Support local volunteer projects.",
+      "body": "Contributions help with clean-up materials and the practical costs of organizing environmental service events."
+    },
+    {
+      "kicker": "Youth leadership",
+      "heading": "Make participation easier.",
+      "body": "Funding helps students turn ideas into local action without having to cover every cost themselves."
+    }
+  ],
+  "closing": {
+    "eyebrow": "Questions",
+    "heading": "Need donation information first?",
+    "body": "Send us a note if you have questions about donations, sponsorship, or how funds will support BAYC.",
+    "cta": {
+      "label": "Contact us",
+      "href": "/contact/"
+    }
+  }
+}
