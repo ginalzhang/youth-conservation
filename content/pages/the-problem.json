@@ -7,8 +7,8 @@
   },
   "thesis": {
     "heading": "Your headline statement goes here",
-    "lede": "LEDE — two or three sentences in slightly larger type, setting up the whole page. On the reference site this is the paragraph about how everyday life depends on burning fossil fuels.",
-    "body": "BODY — the fuller explanation that follows the lede. One paragraph, no image."
+    "lede": "Climate literacy and action matter more now than ever. False information and misconceptions ultimately hinder our progress toward a sustainable future. How can we tackle issues that we do not fully understand?",
+    "body": "The vast majority of the world agrees that something must be done to reduce global warming. 62% of Americans feel a personal duty to reduce the effects of climate change. However, global emissions has increased, with human-produced greenhouse gases rising 49% since 1990. "
   },
   "blockOne": {
     "eyebrow": "Climate issues",
@@ -22,14 +22,14 @@
     "eyebrow": "Local impact",
     "heading": "Subheading for your local findings",
     "body": "BODY — one short paragraph of setup, then the bullets below.",
+    "sourceLabel": "name the source and link it",
+    "sourceHref": "#",
+    "imagePlaceholder": "MAP OR IMAGE — local hazard or impact visual",
     "findings": [
       "First finding. One sentence, one fact.",
       "Second finding.",
       "Third finding."
-    ],
-    "sourceLabel": "name the source and link it",
-    "sourceHref": "#",
-    "imagePlaceholder": "MAP OR IMAGE — local hazard or impact visual"
+    ]
   },
   "blockThree": {
     "eyebrow": "The climate literacy crisis",
@@ -50,9 +50,18 @@
   "learnMore": {
     "heading": "Learn more:",
     "links": [
-      { "label": "First resource link", "href": "#" },
-      { "label": "Second resource link", "href": "#" },
-      { "label": "Third resource link", "href": "#" }
+      {
+        "label": "First resource link",
+        "href": "#"
+      },
+      {
+        "label": "Second resource link",
+        "href": "#"
+      },
+      {
+        "label": "Third resource link",
+        "href": "#"
+      }
     ]
   },
   "cta": {
