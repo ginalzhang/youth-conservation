@@ -22,8 +22,8 @@
     "eyebrow": "Local impact",
     "heading": "How does this impact the Bay Area?",
     "body": "Carbon dioxide is produced as a byproduct of burning fossil fuels. In the Bay Area, roughly 33% of carbon footprints are from transportation and motor vehicles, including 9.7 metric tons from fuels and .5 metric tons from motor vehicle manufacturing and repairs. Carbon emission rates raising leads to a warmer climate because it traps heat in the atmosphere. A warmer climate causes thermal expansion in water and increased volumes of land-ice being moved to the oceans.",
-    "sourceLabel": "UC Berkeley",
-    "sourceHref": "#https://news.berkeley.edu/2016/01/06/new-interactive-map-compares-carbon-footprints-of-bay-area-neighborhoods/",
+    "sourceLabel": "UC Berkeley - https://news.berkeley.edu/2016/01/06/new-interactive-map-compares-carbon-footprints-of-bay-area-neighborhoods/",
+    "sourceHref": "# https://news.berkeley.edu/2016/01/06/new-interactive-map-compares-carbon-footprints-of-bay-area-neighborhoods/",
     "imagePlaceholder": "MAP OR IMAGE — local hazard or impact visual",
     "findings": [
       "\"One inundation scenario for the Bay Area according to new data from a USGS report on sea level rise in California. The scenario pictured reflects a rise of 3.3 feet, which is within the projected range according to the 4th California Climate Assessment of 2016.\"",
