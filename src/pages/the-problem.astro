@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { problemPage } from "../lib/content";
+import { problemPage, toPublicPath } from "../lib/content";
 
 const findings = problemPage.blockTwo.findings as string[];
 const learnMoreLinks = problemPage.learnMore.links as Array<{ label: string; href: string }>;
@@ -49,7 +49,18 @@ const learnMoreLinks = problemPage.learnMore.links as Array<{ label: string; hre
           </p>
         </div>
         <div class="frame" data-reveal>
-          <div class="photo-placeholder problem-visual-slot">{problemPage.blockOne.imagePlaceholder}</div>
+          {
+            problemPage.blockOne.image ? (
+              <img
+                class="photo problem-visual-slot"
+                src={toPublicPath(problemPage.blockOne.image)}
+                alt={problemPage.blockOne.imageAlt || problemPage.blockOne.heading}
+                loading="lazy"
+              />
+            ) : (
+              <div class="photo-placeholder problem-visual-slot">{problemPage.blockOne.imagePlaceholder}</div>
+            )
+          }
         </div>
       </div>
     </section>
@@ -71,7 +82,18 @@ const learnMoreLinks = problemPage.learnMore.links as Array<{ label: string; hre
           </p>
         </div>
         <div class="frame" data-reveal>
-          <div class="photo-placeholder problem-visual-slot">{problemPage.blockTwo.imagePlaceholder}</div>
+          {
+            problemPage.blockTwo.image ? (
+              <img
+                class="photo problem-visual-slot"
+                src={toPublicPath(problemPage.blockTwo.image)}
+                alt={problemPage.blockTwo.imageAlt || problemPage.blockTwo.heading}
+                loading="lazy"
+              />
+            ) : (
+              <div class="photo-placeholder problem-visual-slot">{problemPage.blockTwo.imagePlaceholder}</div>
+            )
+          }
         </div>
       </div>
     </section>
@@ -80,7 +102,18 @@ const learnMoreLinks = problemPage.learnMore.links as Array<{ label: string; hre
     <section class="sec-sm band-pale">
       <div class="wrap split">
         <div class="frame" data-reveal>
-          <div class="photo-placeholder problem-visual-slot">{problemPage.blockThree.imagePlaceholder}</div>
+          {
+            problemPage.blockThree.image ? (
+              <img
+                class="photo problem-visual-slot"
+                src={toPublicPath(problemPage.blockThree.image)}
+                alt={problemPage.blockThree.imageAlt || problemPage.blockThree.heading}
+                loading="lazy"
+              />
+            ) : (
+              <div class="photo-placeholder problem-visual-slot">{problemPage.blockThree.imagePlaceholder}</div>
+            )
+          }
         </div>
         <div data-reveal>
           <div class="eyebrow">{problemPage.blockThree.eyebrow}</div>

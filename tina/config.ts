@@ -37,7 +37,9 @@ const problemBlockFields: TinaField[] = [
   { type: "string", name: "body", label: "Body slot", ui: { component: "textarea" }, required: true },
   { type: "string", name: "sourceLabel", label: "Source label", required: true },
   { type: "string", name: "sourceHref", label: "Source URL", required: true },
-  { type: "string", name: "imagePlaceholder", label: "Image placeholder", required: true }
+  { type: "image", name: "image", label: "Image" },
+  { type: "string", name: "imageAlt", label: "Image alt text" },
+  { type: "string", name: "imagePlaceholder", label: "Placeholder text", required: true }
 ];
 
 const pageShellFields: TinaField[] = [

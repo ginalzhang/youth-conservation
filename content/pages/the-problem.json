@@ -16,6 +16,8 @@
     "body": "According to the California Environmental Protection Agency, weather extremes are intensifying and has become more erratic. The increase in greenhouse gas emissions has led average air temperatures to increase by about 2.5 degrees F since 1895. As a result, a multitude of problems has arose. Hotter and drier conditions has led to the increase of reports of work-related heat illnesses tripling in the past 20 years along with the raise of deadly wildfires and wildfire smoke and a significant loss of California's glaciers. ",
     "sourceLabel": "CalEPA - https://oehha.ca.gov/climate-change/press-release/new-report-shows-rapidly-accelerating-effects-climate-change-demonstrates-importance-state-actions",
     "sourceHref": "#https://oehha.ca.gov/climate-change/press-release/new-report-shows-rapidly-accelerating-effects-climate-change-demonstrates-importance-state-actions",
+    "image": "",
+    "imageAlt": "",
     "imagePlaceholder": "CHART OR INFOGRAPHIC — your climate issues data"
   },
   "blockTwo": {
@@ -24,6 +26,8 @@
     "body": "Carbon dioxide is produced as a byproduct of burning fossil fuels. In the Bay Area, roughly 33% of carbon footprints are from transportation and motor vehicles, including 9.7 metric tons from fuels and .5 metric tons from motor vehicle manufacturing and repairs. Carbon emission rates raising leads to a warmer climate because it traps heat in the atmosphere. A warmer climate causes thermal expansion in water and increased volumes of land-ice being moved to the oceans.",
     "sourceLabel": "UC Berkeley - https://news.berkeley.edu/2016/01/06/new-interactive-map-compares-carbon-footprints-of-bay-area-neighborhoods/",
     "sourceHref": "# https://news.berkeley.edu/2016/01/06/new-interactive-map-compares-carbon-footprints-of-bay-area-neighborhoods/",
+    "image": "",
+    "imageAlt": "",
     "imagePlaceholder": "MAP OR IMAGE — local hazard or impact visual",
     "findings": [
       "\"One inundation scenario for the Bay Area according to new data from a USGS report on sea level rise in California. The scenario pictured reflects a rise of 3.3 feet, which is within the projected range according to the 4th California Climate Assessment of 2016.\"",
@@ -38,6 +42,8 @@
     "body": "BODY — what the literacy gap is, who it affects, and the data behind it.",
     "sourceLabel": "name the source and link it",
     "sourceHref": "#",
+    "image": "",
+    "imageAlt": "",
     "imagePlaceholder": "CHART OR INFOGRAPHIC — climate literacy data"
   },
   "blockFour": {
