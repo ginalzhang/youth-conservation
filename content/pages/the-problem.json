@@ -12,10 +12,10 @@
   },
   "blockOne": {
     "eyebrow": "Climate issues",
-    "heading": "Subheading for your first data point",
-    "body": "BODY — explain the chart beside this. What it measures, over what period, and the one thing you want a reader to take away.",
-    "sourceLabel": "name the source and link it",
-    "sourceHref": "#",
+    "heading": "California's temperatures is rising due to increasing emissions of greenhouse gases",
+    "body": "According to the California Environmental Protection Agency, weather extremes are intensifying and has become more erratic. The increase in greenhouse gas emissions has led average air temperatures to increase by about 2.5 degrees F since 1895. As a result, a multitude of problems has arose. Hotter and drier conditions has led to the increase of reports of work-related heat illnesses tripling in the past 20 years along with the raise of deadly wildfires and wildfire smoke and a significant loss of California's glaciers. ",
+    "sourceLabel": "CalEPA ",
+    "sourceHref": "#https://oehha.ca.gov/climate-change/press-release/new-report-shows-rapidly-accelerating-effects-climate-change-demonstrates-importance-state-actions",
     "imagePlaceholder": "CHART OR INFOGRAPHIC — your climate issues data"
   },
   "blockTwo": {
